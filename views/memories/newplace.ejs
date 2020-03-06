@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>New Person</title>
+</head>
+<body>
+    <div class="col-xs-1" align="center">
+        <div class="heading">
+            <h1 class="header">Remembr</h1>
+        </div>
+    <div class="container">
+        <h3 class="instructions">Add A New Place</h3>
+        <div class="bodySpaceToUse">
+            <form action="/memories/places" method="POST">
+                <div class="form-group">
+                    <label for="placeName">Place Name:</label>
+                    <input type="text" class="form-control" name="placeName" placeholder="e.g. LA Fitness">
+                </div>
+                <div class="form-group">
+                    <label for="placeLocation">Location:</label>
+                    <input type="text" class="form-control" name="placeLocation" placeholder="e.g. 15627 S La Cienega Blvd">
+                </div>
+                <div class="form-group">
+                    <label for="placeActivity">Activity:</label>
+                    <input type="text" class="form-control" name="placeActivity" placeholder="e.g. Gym">
+                </div>
+                <div class="form-group">
+                    <label for="placeImg">Image:</label>
+                    <input type="text" class="form-control" name="placeImg" placeholder="Image URL">
+                </div>
+                <input class="btn btn-success btn-lg" id="submitNew" type="submit" name="" value="Add New Place">
+            </form>
+        </div>
+    </div>
+  </div>
+</body>
+</html>

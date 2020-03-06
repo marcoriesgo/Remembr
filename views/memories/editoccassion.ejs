@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Edit Person</title>
+</head>
+<body>
+    <div class="col-xs-1" align="center">
+        <div class="heading">
+            <h1 class="header">Remembr</h1>
+        </div>
+    <div class="container">
+        <h3 class="instructions">Edit Occassion</h3>
+        <div class="bodySpaceToUse">
+            <form class="edit" action="/memories/occassions/<%=memory.id%>?_method=PUT" method="POST">
+                <div class="form-group">
+                    <label for="occassionName">Occassion Name:</label>
+                    <input type="text" class="form-control" name="occassionName" value="<%=memory.occassionName%>">
+                </div>
+                <div class="form-group">
+                    <label for="occassionDate">Date:</label>
+                    <input type="text" class="form-control" name="occassionDate" value="<%=memory.occassionDate%>">
+                </div>
+                <div class="form-group">
+                    <label for="occassionImportance">Importance:</label>
+                    <input type="text" class="form-control" name="occassionImportance" value="<%=memory.occassionImportance%>">
+                </div>
+                <div class="form-group">
+                    <label for="occassionNotes">Notes:</label>
+                    <input type="text" class="form-control" name="occassionNotes" value="<%=memory.occassionNotes%>">
+                </div>
+                <input class="btn btn-warning btn-lg" id="submitEdit" type="submit" name="" value="Add Occassion Changes">
+            </form>
+        </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>New Person</title>
+</head>
+<body>
+    <div class="col-xs-1" align="center">
+        <div class="heading">
+            <h1 class="header">Remembr</h1>
+        </div>
+    <div class="container">
+        <h3 class="instructions">Add A New Occassion</h3>
+        <div class="bodySpaceToUse">
+            <form action="/memories/occassions" method="POST">
+                <div class="form-group">
+                    <label for="occassionName">Occassion Name:</label>
+                    <input type="text" class="form-control" name="occassionName" placeholder="e.g. Sydney's Birthday">
+                </div>
+                <div class="form-group">
+                    <label for="occassionDate">Date:</label>
+                    <input type="text" class="form-control" name="occassionDate" placeholder="e.g. November 12">
+                </div>
+                <div class="form-group">
+                    <label for="occassionImportance">Importance:</label>
+                    <input type="text" class="form-control" name="occassionImportance" placeholder="e.g. High">
+                </div>
+                <div class="form-group">
+                    <label for="occassionNotes">Notes:</label>
+                    <input type="text" class="form-control" name="occassionNotes" placeholder="e.g. Remember to bring a cake">
+                </div>
+                <input class="btn btn-success btn-lg" id="submitNew" type="submit" name="" value="Add New Occassion">
+            </form>
+        </div>
+    </div>
+  </div>
+</body>
+</html>

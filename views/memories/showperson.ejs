@@ -1,0 +1,36 @@
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People</title>
+</head>
+<body>
+    <div class="col-xs-1" align="center">
+        <div class="heading">
+            <h1 class="header">Remembr</h1>
+        </div>
+        <div class="personContainer">
+                <div class="personSelected">
+                    <h4 class="category">Name:</h4>
+                    <p class="description"><%=memory.personName %></p>
+                    <img class="itemImage"src="<%= memory.personImg %>" class="img-fluid" alt="<%= memory.personName %>">
+                    <h4 class="category">Relationship:</h4>
+                    <p class="description"><%=memory.personRelation %></p>
+                    <h4 class="category">Birthday:</h4>
+                    <p class="description"><%=memory.personBirthday %></p>
+                    <h4 class="category">Notes:</h4>
+                    <p class="description"><%=memory.personNotes %></p>
+                    <div class="edit"><a type="button" class="btn btn-outline-info btn-lg btn-block" href="/memories/people/<%=memory.id%>/edit">Edit</a></div>             
+                    <form class="delete" action="/memories/people/<%=memory.id%>?_method=DELETE" method="POST">
+                        <div class="deleteButton"><input type="submit" type="button" class="btn btn-outline-danger btn-lg btn-block" value="Delete"></div>
+                    </form>             
+                </div>
+            </div>  
+        </div>
+    </div>
+</body>
+</html>

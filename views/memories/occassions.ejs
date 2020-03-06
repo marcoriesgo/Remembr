@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokedex</title>
+    <title>Places</title>
 </head>
 <body>
     <div class="col-xs-1" align="center">
@@ -14,10 +14,16 @@
             <h1 class="header">Remembr</h1>
         </div>
         <div class="container">
-            <h2>Memories</h2>
-            <div class="showPeopleButton"><a type="button" class="btn btn-danger btn-lg" href="/memories/people">People</a></div>
-            <div class="showPlacesButton"><a type="button" class="btn btn-danger btn-lg" href="/memories/places">Places</a></div>
-            <div class="showOccassionsButton"><a type="button" class="btn btn-danger btn-lg" href="/memories/occassions">Occassions</a></div>
+                <div class="newItemButton"><a type="button" class="btn btn-danger btn-lg" href="/memories/occassions/new">Add An Occassion</a></div>
+            <h2>Places</h2>
+            <div class="cardsContainer">
+                    <% memories.forEach(function(memory) { %>
+                        <div class="occassionsItem">
+                            <div class="occassionName"><a href="/memories/occassions/<%=memory.id%>"><h5><%= memory.occassionName %> </h5></a></div>
+                            <div class="occassionDate"><%=memory.occassionDate %></div>
+                        </div>
+                    <% }); %>
+                </div>
         </div>
     </div>
 </body>
