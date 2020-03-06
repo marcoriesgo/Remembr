@@ -33,7 +33,7 @@ db.once ('open', function() {
 //Create the middleware:
 
 //Public folder static:
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 //Method override for POST, DELETE, and PUT requests from forms:
 app.use(methodOverride('_method'));
