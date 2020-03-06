@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
+
+body {
+    font-family: 'Dosis', sans-serif;
+}
+
+.heading {
+    background: linear-gradient(307deg, rgb(28, 155, 224) 0%, #000046 100%);
+    height: 100px;
+    width: 100%;
+}
+
+.logo {
+    width: 87px;
+    height: 65px;
+    position: absolute;
+    left: 30px;
+    top: 15px
+}
+
+.header {
+    padding-top: 20px;
+    font-size: 48px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 52px;
+    margin-top: 40px;
+    margin-bottom: 0px;
+    display: flexbox;
+}
+
+.linkToPage {
+    display: inline-block;
+    position: relative;
+    width: 400px;
+    height: 600px;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 40px;
+    border-radius: 40px;
+    opacity: 0.70;
+    transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -webkit-transition: opacity 0.3s ease-in-out;
+}
+
+.linkToPage:hover {
+    opacity: 1.0;
+    transition: opacity .3s ease-in-out;
+    -moz-transition: opacity .3s ease-in-out;
+    -webkit-transition: opacity .3s ease-in-out;
+}
+
+.linkImage {
+    border-radius: 40px;
+}
+
+.imageLinkText {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    padding: 10px 40px 10px 40px;
+    border-radius: 20px;
+    width: fit-content;
+    background-color: rgba(0, 0, 0, 0.756);
+    color: white;
+}
+
+.imageLinkText h3 {
+    font-size: 46px;
+}
