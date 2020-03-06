@@ -1,0 +1,46 @@
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+</head>
+<body>
+    <div class="col-xs-1" align="center">
+        <div class="heading">
+            <h1 class="header">Remembr</h1>
+        </div>
+        <div class="container">
+            <h2>Memories</h2>
+            <% memories.forEach(function(memory) { %>
+                <div class="cardsContainer">
+                    <h3>People</h3>
+                        <div class="peopleItem" style="background: black;">
+                            <div class="personName"><a href="/memories/<%=memory.id%>"><h5><%= memory.personName %> </h5></a></div>
+                            <div class="personImage"><a href="/memories/<%=memory.id%>"><img src="<%= memory.personImg %>" class="img-fluid" alt="<%= memory.personName %>"></a></div>
+                            <div class="personRelation"><%=memory.personRelation %></div>
+                        </div>
+                </div>
+                <div class="cardsContainer">
+                    <h3>Places</h3>
+                        <div class="placesItem">
+                            <div class="placeName"><a href="/memories/<%=memory.id%>"><h5><%= memory.placeName %> </h5></a></div>
+                            <div class="placeImage"><a href="/memories/<%=memory.id%>"><img src="<%= memory.placeImg %>" class="img-fluid" alt="<%= memory.placeName %>"></a></div>
+                            <div class="placeActivity"><%=memory.placeActivity %></div>
+                        </div>
+                </div>
+                <div class="cardsContainer">
+                    <h3>Occassions</h3>
+                        <div class="occassionsItem">
+                            <div class="occassionName"><a href="/memories/<%=memory.id%>"><h5><%= memory.occassionName %> </h5></a></div>
+                            <div class="occassionDate"><%=memory.occassionDate %></div>
+                        </div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+</body>
+</html>
