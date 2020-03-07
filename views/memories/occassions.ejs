@@ -19,10 +19,10 @@
             <h2>Occassions</h2>
             <div class="newItemButton"><a type="button" class="btn btn-warning btn-lg btn-block" href="/memories/occassions/new">Add An Occassion</a></div>
             <div class="cardsContainer">
-                    <% memories.forEach(function(memory) { %>
+                    <% occassions.forEach(function(occassions) { %>
                         <div class="occassionsItem">
-                            <div class="occassionName"><a href="/memories/occassions/<%=memory.id%>"><h5><%= memory.occassionName %> </h5></a></div>
-                            <div class="occassionDate"><%=memory.occassionDate %></div>
+                            <div class="occassionName"><a href="/memories/occassions/<%=occassions.id%>"><h5><%= occassions.occassionName %> </h5></a></div>
+                            <div class="occassionDate"><%=occassions.occassionDate %></div>
                         </div>
                     <% }); %>
                 </div>

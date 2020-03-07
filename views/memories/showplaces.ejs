@@ -15,18 +15,18 @@
             <h1 class="header">Remembr</h1>
             <div class="backButton"><a type="button" class="btn btn-warning btn-lg" href="/memories/places">Return to Places</a></div>
         </div>
-        <div class="placesContainer">
+        <div class="placeContainer">
                 <div class="placeSelected">
                     <h4 class="category">Place Name:</h4>
-                    <p class="description"><%=memory.placeName %></p>
+                    <p class="description"><%=places.placeName %></p>
                     <h4 class="category">Location:</h4>
-                    <p class="description"><%=memory.placeLocation %></p>
+                    <p class="description"><%=places.placeLocation %></p>
                     <h4 class="category">Activity:</h4>
-                    <p class="description"><%=memory.placeActivity %></p>
-                    <img class="itemImage"src="<%= memory.placeImg %>" class="img-fluid" alt="<%= memory.personName %>">
-                    <div class="edit"><a type="button" class="btn btn-outline-info btn-lg btn-block" href="/memories/places/<%=memory.id%>/edit">Edit</a></div>             
-                    <form class="delete" action="/memories/places/<%=memory.id%>?_method=DELETE" method="POST">
-                        <div class="deleteButton"><input type="submit" type="button" class="btn btn-outline-danger btn-lg btn-block" value="Delete"></div>
+                    <p class="description"><%=places.placeActivity %></p>
+                    <img class="itemImage"src="<%= places.placeImg %>" class="img-fluid" alt="<%= places.personName %>">
+                    <div class="edit"><a type="button" class="btn btn-primary btn-lg btn-block" href="/memories/places/<%=places.id%>/edit">Edit</a></div>             
+                    <form class="delete" action="/memories/places/<%=places.id%>?_method=DELETE" method="POST">
+                        <div class="deleteButton"><input type="submit" type="button" class="btn btn-danger btn-lg btn-block" value="Delete"></div>
                     </form>             
                 </div>
             </div>  

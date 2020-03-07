@@ -2,8 +2,19 @@
 const express = require('express');
 const memories = express.Router();
 
+//3 different for each category
+//the one before and the one after
+
+
 //Access the memories model (database) in order to make routes to call it:
+//This one is used to view the whole database at once
+//Also used to redirect to Index Homepage
 const Memory = require('../models/memories');
+
+//Access each of the three models/databases to make calls to them
+const People = require('../models/people');
+const Places = require('../models/places');
+const Occassions = require('../models/occassions');
 
 //Create a route that will allow you to see the JSON database:
 memories.get('/json', (req, res) => {
@@ -12,8 +23,8 @@ memories.get('/json', (req, res) => {
     });
 });
 
-// Create the first mvp REST routes:
 
+// Create the first mvp REST routes:
 // Index Route to Homepage:
 memories.get('/', (req, res) => {
     Memory.find( {}, (err, memories) => {
@@ -24,14 +35,23 @@ memories.get('/', (req, res) => {
     });
 });
 
-// People Routes
+
+
+
+
+/*
+//
+PEOPLE ROUTES:
+//
+*/
+
 // Main page route:
 memories.get('/people', (req, res) => {
-    Memory.find( {}, (err, memories) => {
+    People.find( {}, (err, people) => {
       if(err) {
         console.log(err); 
       };
-      res.render('./memories/people.ejs', { memories });
+      res.render('./memories/people.ejs', { people });
     });
 });
 
@@ -42,18 +62,18 @@ memories.get('/people/new', (req, res) => {
 
 // Make a SHOW person memories route:
 memories.get ('/people/:id', (req, res) => {
-    Memory.findById(req.params.id, (err, memory) => {
+    People.findById(req.params.id, (err, people) => {
       if(err) {
         console.log(err); 
       };
       res.render('./memories/showperson.ejs', 
-      { memory: memory });
+      { people: people });
     });
 });
 
 // Create a POST route to add the new person:
 memories.post ('/people', (req, res) => {
-    Memory.create(req.body, (err, memory) => {
+    People.create(req.body, (err, people) => {
       if(err) { 
         res.send(err);
       } else {
@@ -64,43 +84,51 @@ memories.post ('/people', (req, res) => {
 
 // Create a GET route to redirect to edit page:
 memories.get('/people/:id/edit', (req, res) => {
-    Memory.findById(req.params.id , (err, memory) => {
+    People.findById(req.params.id , (err, people) => {
           if(err) { 
             console.log(err); 
           }
           res.render('./memories/editperson.ejs', 
-          {memory: memory}
+          {people: people}
         );
     });
 });
 
 // PUT route to add the changes in the memory:
 memories.put('/people/:id', (req, res) => {
-    Memory.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, memory) => {
+    People.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, people) => {
         if(err) { 
             console.log(err);
         }
-        res.redirect('/memories/people/' + memory.id);
+        res.redirect('/memories/people/' + people.id);
     });
 });
 
 // Make a delete route to delete the memories:
 memories.delete('/people/:id', (req, res) => {
-    Memory.findByIdAndRemove(req.params.id, (err, data) => {
+    People.findByIdAndRemove(req.params.id, (err, data) => {
       res.redirect('/memories/people');//redirect back to memories index
     });
 });
 
 
 
+
+
+/*
+//
+PLACES ROUTES:
+//
+*/
+
 //Places Route:
 // Main page route:
 memories.get('/places', (req, res) => {
-    Memory.find( {}, (err, memories) => {
+    Places.find( {}, (err, places) => {
       if(err) {
         console.log(err); 
       };
-      res.render('./memories/places.ejs', { memories });
+      res.render('./memories/places.ejs', { places });
     });
 });
 
@@ -111,18 +139,18 @@ memories.get('/places/new', (req, res) => {
 
 // Make a SHOW person memories route:
 memories.get ('/places/:id', (req, res) => {
-    Memory.findById(req.params.id, (err, memory) => {
+    Places.findById(req.params.id, (err, places) => {
       if(err) {
         console.log(err); 
       };
       res.render('./memories/showplaces.ejs', 
-      { memory: memory });
+      { places: places });
     });
 });
 
 // Create a POST route to add the new memory:
 memories.post ('/places', (req, res) => {
-    Memory.create(req.body, (err, memory) => {
+    Places.create(req.body, (err, places) => {
       if(err) { 
         res.send(err);
       } else {
@@ -133,42 +161,50 @@ memories.post ('/places', (req, res) => {
 
 // Create a GET route to redirect to edit page:
 memories.get('/places/:id/edit', (req, res) => {
-    Memory.findById(req.params.id , (err, memory) => {
+    Places.findById(req.params.id , (err, places) => {
           if(err) { 
             console.log(err); 
           }
           res.render('./memories/editplace.ejs', 
-          {memory: memory}
+          {places: places}
         );
     });
 });
 
 // PUT route to add the changes in the memory:
 memories.put('/places/:id', (req, res) => {
-    Memory.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, memory) => {
+    Places.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, places) => {
         if(err) { 
             console.log(err);
         }
-        res.redirect('/memories/places/' + memory.id);
+        res.redirect('/memories/places/' + places.id);
     });
 });
 
 // Make a delete route to delete the memories:
 memories.delete('/places/:id', (req, res) => {
-    Memory.findByIdAndRemove(req.params.id, (err, data) => {
+    Places.findByIdAndRemove(req.params.id, (err, data) => {
       res.redirect('/memories/places');//redirect back to memories index
     });
 });
 
 
-//Occassions route:
+
+
+
+/*
+//
+OCCASSIONS ROUTES:
+//
+*/
+
 // Main page route:
 memories.get('/occassions', (req, res) => {
-    Memory.find( {}, (err, memories) => {
+    Occassions.find( {}, (err, occassions) => {
       if(err) {
         console.log(err); 
       };
-      res.render('./memories/occassions.ejs', { memories });
+      res.render('./memories/occassions.ejs', { occassions });
     });
 });
 
@@ -179,18 +215,18 @@ memories.get('/occassions/new', (req, res) => {
 
 // Make a SHOW occassion memories route:
 memories.get ('/occassions/:id', (req, res) => {
-    Memory.findById(req.params.id, (err, memory) => {
+    Occassions.findById(req.params.id, (err, occassions) => {
       if(err) {
         console.log(err); 
       };
       res.render('./memories/showoccassions.ejs', 
-      { memory: memory });
+      { occassions: occassions });
     });
 });
 
 // Create a POST route to add the new memory:
 memories.post ('/occassions', (req, res) => {
-    Memory.create(req.body, (err, memory) => {
+    Occassions.create(req.body, (err, occassions) => {
       if(err) { 
         res.send(err);
       } else {
@@ -201,60 +237,68 @@ memories.post ('/occassions', (req, res) => {
 
 // Create a GET route to redirect to edit page:
 memories.get('/occassions/:id/edit', (req, res) => {
-    Memory.findById(req.params.id , (err, memory) => {
+    Occassions.findById(req.params.id , (err, occassions) => {
           if(err) { 
             console.log(err); 
           }
           res.render('./memories/editoccassion.ejs', 
-          {memory: memory}
+          {occassions: occassions}
         );
     });
 });
 
 // PUT route to add the changes in the memory:
 memories.put('/occassions/:id', (req, res) => {
-    Memory.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, memory) => {
+    Occassions.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, occassions) => {
         if(err) { 
             console.log(err);
         }
-        res.redirect('/memories/occassions/' + memory.id);
+        res.redirect('/memories/occassions/' + occassions.id);
     });
 });
 
 // Make a delete route to delete the memories:
 memories.delete('/occassions/:id', (req, res) => {
-    Memory.findByIdAndRemove(req.params.id, (err, data) => {
+    Occassions.findByIdAndRemove(req.params.id, (err, data) => {
       res.redirect('/memories/occassions');//redirect back to memories index
     });
 });
 
-//Create a seed route to call trial memories:
-memories.get('/seed/newmemories', (req, res) => {
-    const newMemories = [
-    {
-    personName: "Laura",
-    personImg: "https://livingcities.s3.amazonaws.com/people/432/display.jpg",
-    personRelation: "Mom"
-    },
-    {
-    placeName: "LA Fitness",
-    placeImg: "https://media.glassdoor.com/l/39/92/ea/66/typical-new-look-of-an-la-fitness.jpg",
-    placeActivity: "Gym"
-    },
-    {
-    occassionName: "Marco Birthday",
-    occassionDate: "July 8"
-    }
-    ];
 
-    Memory.create(newMemories, (err, memory) => {
-    if(err) { 
-        console.log(err); 
-    }
-    console.log( "Seed memories created." );
-    res.redirect('/memories');
-    });
-});
+
+/*
+//
+POTENTIAL SEED ROUTES:
+//
+*/
+
+// //Create a seed route to call trial memories:
+// memories.get('/seed/newmemories', (req, res) => {
+//     const newMemories = [
+//     {
+//     personName: "Laura",
+//     personImg: "https://livingcities.s3.amazonaws.com/people/432/display.jpg",
+//     personRelation: "Mom"
+//     },
+//     {
+//     placeName: "LA Fitness",
+//     placeImg: "https://media.glassdoor.com/l/39/92/ea/66/typical-new-look-of-an-la-fitness.jpg",
+//     placeActivity: "Gym"
+//     },
+//     {
+//     occassionName: "Marco Birthday",
+//     occassionDate: "July 8"
+//     }
+//     ];
+
+//     Memory.create(newMemories, (err, memory) => {
+//     if(err) { 
+//         console.log(err); 
+//     }
+//     console.log( "Seed memories created." );
+//     res.redirect('/memories');
+//     });
+// });
 
 //Use module exports so that the file can be accessed in the server.js:
 //Export this router and then make it a requirement for server.js

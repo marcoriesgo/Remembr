@@ -13,21 +13,21 @@
         <div class="heading">
             <img class="logo" src="/images/logo.png"/>
             <h1 class="header">Remembr</h1>
-            <div class="backButton"><a type="button" class="btn btn-danger btn-lg" href="/memories/occassions">Return to Occassions</a></div>
+            <div class="backButton"><a type="button" class="btn btn-warning btn-lg" href="/memories/occassions">Return to Occassions</a></div>
         </div>
-        <div class="placesContainer">
+        <div class="occassionContainer">
                 <div class="placeSelected">
                     <h4 class="category">Occassion Name:</h4>
-                    <p class="description"><%=memory.occassionName %></p>
+                    <p class="description"><%=occassions.occassionName %></p>
                     <h4 class="category">Date:</h4>
-                    <p class="description"><%=memory.occassionDate %></p>
+                    <p class="description"><%=occassions.occassionDate %></p>
                     <h4 class="category">Importance:</h4>
-                    <p class="description"><%=memory.occassionImportance %></p>
+                    <p class="description"><%=occassions.occassionImportance %></p>
                     <h4 class="category">Notes:</h4>
-                    <p class="description"><%=memory.occassionNotes %></p>
-                    <div class="edit"><a type="button" class="btn btn-outline-info btn-lg btn-block" href="/memories/occassions/<%=memory.id%>/edit">Edit</a></div>             
-                    <form class="delete" action="/memories/occassions/<%=memory.id%>?_method=DELETE" method="POST">
-                        <div class="deleteButton"><input type="submit" type="button" class="btn btn-outline-danger btn-lg btn-block" value="Delete"></div>
+                    <p class="description"><%=occassions.occassionNotes %></p>
+                    <div class="edit"><a type="button" class="btn btn-primary btn-lg btn-block" href="/memories/occassions/<%=occassions.id%>/edit">Edit</a></div>             
+                    <form class="delete" action="/memories/occassions/<%=occassions.id%>?_method=DELETE" method="POST">
+                        <div class="deleteButton"><input type="submit" type="button" class="btn btn-danger btn-lg btn-block" value="Delete"></div>
                     </form>             
                 </div>
             </div>  

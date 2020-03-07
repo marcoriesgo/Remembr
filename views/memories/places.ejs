@@ -19,11 +19,11 @@
             <h2>My Places</h2>
             <div class="newItemButton"><a type="button" class="btn btn-warning btn-lg btn-block" href="/memories/places/new">Add A Place</a></div>
             <div class="container-flex">
-                <% memories.forEach(function(memory) { %>
+                <% places.forEach(function(places) { %>
                     <div class="placesItem">
-                            <div class="placeName"><a href="/memories/places/<%=memory.id%>"><h5><%= memory.placeName %> </h5></a></div>
-                            <div><a href="/memories/places/<%=memory.id%>"><img src="<%= memory.placeImg %>" class="placeImage" alt="<%= memory.placeName %>"></a></div>
-                            <div class="placeActivity"><%=memory.placeActivity %></div>
+                            <div class="placeName"><a href="/memories/places/<%=places.id%>"><h5><%= places.placeName %> </h5></a></div>
+                            <div><a href="/memories/places/<%=places.id%>"><img src="<%= places.placeImg %>" class="placeImage" alt="<%= places.placeName %>"></a></div>
+                            <div class="placeActivity"><%=places.placeActivity %></div>
                     </div>
                 <% }); %>
             </div>

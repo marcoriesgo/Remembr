@@ -18,16 +18,16 @@
         <div class="personContainer">
                 <div class="personSelected">
                     <h4 class="category">Name:</h4>
-                    <p class="description"><%=memory.personName %></p>
-                    <img class="personImage"src="<%= memory.personImg %>" class="img-fluid" alt="<%= memory.personName %>">
+                    <p class="description"><%=people.personName %></p>
+                    <img class="personImage"src="<%= people.personImg %>" class="img-fluid" alt="<%= people.personName %>">
                     <h4 class="category">Relationship:</h4>
-                    <p class="description"><%=memory.personRelation %></p>
+                    <p class="description"><%=people.personRelation %></p>
                     <h4 class="category">Birthday:</h4>
-                    <p class="description"><%=memory.personBirthday %></p>
+                    <p class="description"><%=people.personBirthday %></p>
                     <h4 class="category">Notes:</h4>
-                    <p class="description"><%=memory.personNotes %></p>
-                    <div class="edit"><a type="button" class="btn btn-primary btn-lg btn-block" href="/memories/people/<%=memory.id%>/edit">Edit</a></div>             
-                    <form class="delete" action="/memories/people/<%=memory.id%>?_method=DELETE" method="POST">
+                    <p class="description"><%=people.personNotes %></p>
+                    <div class="edit"><a type="button" class="btn btn-primary btn-lg btn-block" href="/memories/people/<%=people.id%>/edit">Edit</a></div>             
+                    <form class="delete" action="/memories/people/<%=people.id%>?_method=DELETE" method="POST">
                         <div class="deleteButton"><input type="submit" type="button" class="btn btn-danger btn-lg btn-block" value="Delete"></div>
                     </form>             
                 </div>

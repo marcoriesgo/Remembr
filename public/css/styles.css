@@ -195,7 +195,7 @@ Error block:
     box-shadow: 6px 5px 6px #b3b3b3eb;
 }
 
-.personSelected {
+.personSelected, .placeSelected, .occassionSelected {
     width: 40%;
 }
 

@@ -19,11 +19,11 @@
             <h2>My People</h2>
             <div class="newItemButton"><a type="button" class="btn btn-warning btn-lg btn-block" href="/memories/people/new">Add A Person</a></div>
             <div class="container-flex">
-                    <% memories.forEach(function(memory) { %>
+                    <% people.forEach(function(people) { %>
                     <div class="personItem">
-                        <div class="personName"><a href="/memories/people/<%=memory.id%>"><p><%= memory.personName %> </p></a></div>
-                        <a href="/memories/people/<%=memory.id%>"><img src="<%= memory.personImg %>" alt="<%= memory.personName %>" class="peoplePicture"></a>
-                        <div class="personRelation"><%=memory.personRelation %></div>
+                        <div class="personName"><a href="/memories/people/<%=people.id%>"><p><%= people.personName %> </p></a></div>
+                        <a href="/memories/people/<%=people.id%>"><img src="<%= people.personImg %>" alt="<%= people.personName %>" class="peoplePicture"></a>
+                        <div class="personRelation"><%=people.personRelation %></div>
                     </div>
                     <% }); %>
                 </div>
