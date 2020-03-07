@@ -3,40 +3,20 @@ const express = require('express');
 const memories = express.Router();
 
 //3 different for each category
-//the one before and the one after
-
 
 //Access the memories model (database) in order to make routes to call it:
-//This one is used to view the whole database at once
-//Also used to redirect to Index Homepage
-const Memory = require('../models/memories');
-
 //Access each of the three models/databases to make calls to them
 const People = require('../models/people');
 const Places = require('../models/places');
 const Occassions = require('../models/occassions');
 
-//Create a route that will allow you to see the JSON database:
-memories.get('/json', (req, res) => {
-    Memory.find((err, memories) => {
-      res.send(memories);
-    });
-});
 
 
 // Create the first mvp REST routes:
 // Index Route to Homepage:
 memories.get('/', (req, res) => {
-    Memory.find( {}, (err, memories) => {
-      if(err) {
-        console.log(err); 
-      };
-      res.render('./memories/index.ejs', { memories });
-    });
+      res.render('./memories/index.ejs');
 });
-
-
-
 
 
 /*
@@ -44,6 +24,14 @@ memories.get('/', (req, res) => {
 PEOPLE ROUTES:
 //
 */
+
+//JSON Route to view the people database
+memories.get('/people/json', (req, res) => {
+  People.find((err, people) => {
+    res.send(people);
+  });
+});
+
 
 // Main page route:
 memories.get('/people', (req, res) => {
@@ -121,6 +109,13 @@ PLACES ROUTES:
 //
 */
 
+//JSON Route to view the places database
+memories.get('/places/json', (req, res) => {
+  Places.find((err, places) => {
+    res.send(places);
+  });
+});
+
 //Places Route:
 // Main page route:
 memories.get('/places', (req, res) => {
@@ -197,6 +192,13 @@ memories.delete('/places/:id', (req, res) => {
 OCCASSIONS ROUTES:
 //
 */
+
+//JSON route to vieew the occassions database
+memories.get('/occassions/json', (req, res) => {
+  Occassions.find((err, occassions) => {
+    res.send(occassions);
+  });
+});
 
 // Main page route:
 memories.get('/occassions', (req, res) => {

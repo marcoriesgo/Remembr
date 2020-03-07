@@ -22,7 +22,7 @@
                     <% people.forEach(function(people) { %>
                     <div class="personItem">
                         <div class="personName"><a href="/memories/people/<%=people.id%>"><p><%= people.personName %> </p></a></div>
-                        <a href="/memories/people/<%=people.id%>"><img src="<%= people.personImg %>" alt="<%= people.personName %>" class="peoplePicture"></a>
+                        <div class="peoplePictureContainer"><a href="/memories/people/<%=people.id%>"><img src="<%= people.personImg %>" alt="<%= people.personName %>" class="img-fluid"></a></div>
                         <div class="personRelation"><%=people.personRelation %></div>
                     </div>
                     <% }); %>

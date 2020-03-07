@@ -21,8 +21,11 @@
             <div class="cardsContainer">
                     <% occassions.forEach(function(occassions) { %>
                         <div class="occassionsItem">
-                            <div class="occassionName"><a href="/memories/occassions/<%=occassions.id%>"><h5><%= occassions.occassionName %> </h5></a></div>
-                            <div class="occassionDate"><%=occassions.occassionDate %></div>
+                            <div id="occassionName"><a href="/memories/occassions/<%=occassions.id%>"><%= occassions.occassionName %></a></div>
+                            <div id="occassionDate"><%=occassions.occassionDate %></div>
+                            <form class="deleteEvent" action="/memories/occassions/<%=occassions.id%>?_method=DELETE" method="POST">
+                                <div class="occassionCompleteButton"><input type="submit" type="button" class="btn btn-success btn-lg" value="Completed"></div>
+                            </form> 
                         </div>
                     <% }); %>
                 </div>

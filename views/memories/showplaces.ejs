@@ -23,7 +23,7 @@
                     <p class="description"><%=places.placeLocation %></p>
                     <h4 class="category">Activity:</h4>
                     <p class="description"><%=places.placeActivity %></p>
-                    <img class="itemImage"src="<%= places.placeImg %>" class="img-fluid" alt="<%= places.personName %>">
+                    <img class="itemImage"src="<%= places.placeImg %>" alt="<%= places.personName %>" class="img-fluid">
                     <div class="edit"><a type="button" class="btn btn-primary btn-lg btn-block" href="/memories/places/<%=places.id%>/edit">Edit</a></div>             
                     <form class="delete" action="/memories/places/<%=places.id%>?_method=DELETE" method="POST">
                         <div class="deleteButton"><input type="submit" type="button" class="btn btn-danger btn-lg btn-block" value="Delete"></div>

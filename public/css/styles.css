@@ -88,13 +88,10 @@ h2 {
     font-size: 46px;
 }
 
-
 .cardsContainer {
     width: 100%;
     height: auto;
 }
-/*
-Error block:
 
 .personItem {
     display: inline-block;
@@ -122,15 +119,21 @@ Error block:
     -webkit-transition: opacity .3s ease-in-out;
 }
 
-.personItemImage {
+.peoplePictureContainer {
     width: 274px;
     height: 274px;
     border-radius: 15%;
     margin-bottom: 11px;
+}
+
+.peoplePictureContainer .img-fluid {
+    width: 100%;
+    height: 100%;
+    border-radius: 15%;
     border: 4px solid black;
 }
 
-*/
+
 
 .homeButton {
     position: absolute;
@@ -200,9 +203,16 @@ Error block:
 }
 
 .personImage {
-    height: 306px;
+    height: 350px;
     width: auto;
-    border-radius: 60px;
+    border-radius: 80px;
+}
+
+.personImage .img-fluid {
+    height: 100%;
+    width: auto;
+    border-radius: 80px;
+    border: 2px solid rgba(0, 0, 0, 0.769);
 }
 
 .category {
@@ -218,7 +228,7 @@ Error block:
 
 .personRelation {
     font-size: 34px;
-    color: black;
+    color: white;
     font-weight: bold;
     letter-spacing: 1px;
 }
@@ -226,17 +236,142 @@ Error block:
 .personName {
     font-size: 36px;
     margin-top: 10px;
-    color: black
+    color: white
 }
 
 a {
-    color: black;
+    color: white;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
 a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.placesItem {
+    display: inline-block;
+    width: 350px;
+    height: 450px;
+    margin: 35px 20px 35px 20px;
+    border-width: 4px; 
+    border-style: solid;
+    border-color: #1d1b1b;
+    border-radius: 25px;
+    background: linear-gradient(307deg, rgb(28, 155, 224) 0%, #000046 100%);
+    box-shadow: 6px 5px 6px #b3b3b3eb;
+    opacity: 0.70;
+    transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -webkit-transition: opacity 0.3s ease-in-out;
+
+}
+
+
+.placesItem:hover {
+    opacity: 1.0;
+    transition: opacity .3s ease-in-out;
+    -moz-transition: opacity .3s ease-in-out;
+    -webkit-transition: opacity .3s ease-in-out;
+}
+
+.placeName {
+    font-size: 36px;
+    margin-top: 18px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.placeImage {
+    width: 260px;
+    height: 260px;
+    border-radius: 15%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.placeImage .img-fluid {
+    height: 100%;
+    width: 100%;
+    border-radius: 15%;
+    border: 4px solid black;
+}
+
+.placeActivity {
+    font-size: 34px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.itemImage {
+    height: 350px;
+    width: 350px;
+    border-radius: 80px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border: 4px solid black;
+}
+
+.itemImage .img-fluid {
+    height: 100%;
+    width: auto;
+    border-radius: 80px;  
+}
+
+.occassionsItem {
+    display: inline-block;
+    width: 350px;
+    height: 200px;
+    margin: 35px 20px 35px 20px;
+    border-width: 4px; 
+    border-style: solid;
+    border-color: black;
+    border-radius: 25px;
+    background: beige;
+    box-shadow: 6px 5px 6px #b3b3b3eb;
+    opacity: 0.70;
+    transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -webkit-transition: opacity 0.3s ease-in-out;
+
+}
+
+
+.occassionsItem:hover {
+    opacity: 1.0;
+    transition: opacity .3s ease-in-out;
+    -moz-transition: opacity .3s ease-in-out;
+    -webkit-transition: opacity .3s ease-in-out;
+}
+
+#occassionName {
+    font-size: 30px;
+    margin-top: 18px;
+    color: black;
+    margin-bottom: 5px;
+}
+
+#occassionDate {
+    font-size: 24px;
+    color: black;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.occassionsItem a {
+    color: black;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.occassionsItem a:hover {
     color: black;
     text-decoration: underline;
+}
+
+.deleteEvent {
+    margin-top: 15px;
 }
 
