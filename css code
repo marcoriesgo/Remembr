@@ -1,4 +1,4 @@
- @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -12,14 +12,6 @@ body {
     height: 100px;
     width: 100%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.646);
-}
-
-.logo {
-    width: 87px;
-    height: 65px;
-    position: absolute;
-    left: 30px;
-    top: 15px
 }
 
 .logo {
@@ -88,19 +80,11 @@ h2 {
     font-size: 46px;
 }
 
-
-.cardsContainer {
-    width: 100%;
-    height: auto;
-}
-/*
-Error block:
-
-.personItem {
+.peopleItem {
     display: inline-block;
     width: 350px;
     height: 450px;
-    margin: 35px 20px 35px 20px;
+    margin: 35px 35px 35px 35px;
     border-width: 4px; 
     border-style: solid;
     border-color: #1d1b1b;
@@ -111,18 +95,16 @@ Error block:
     transition: opacity 0.3s ease-in-out;
     -moz-transition: opacity 0.3s ease-in-out;
     -webkit-transition: opacity 0.3s ease-in-out;
-
 }
 
-
-.personItem:hover {
+.peopleItem:hover {
     opacity: 1.0;
     transition: opacity .3s ease-in-out;
     -moz-transition: opacity .3s ease-in-out;
     -webkit-transition: opacity .3s ease-in-out;
 }
 
-.personItemImage {
+.peopleItem .img-fluid {
     width: 274px;
     height: 274px;
     border-radius: 15%;
@@ -130,15 +112,12 @@ Error block:
     border: 4px solid black;
 }
 
-*/
-
 .homeButton {
     position: absolute;
     top: 25px;
     right: 60px;
     box-shadow: 5px 5px 6px rgba(255, 255, 255, 0.541);
 }
-
 .newItemButton {
     display: block;
     margin-top: 30px;
@@ -147,62 +126,33 @@ Error block:
     margin-bottom: 15px;
 }
 
+.personName {
+    font-size: 36px;
+    margin-top: 10px;
+    color: white
+}
+a {
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+.personRelation {
+    font-size: 34px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
 .backButton {
     position: absolute;
     top: 25px;
     right: 60px;
     box-shadow: 5px 5px 6px rgba(255, 255, 255, 0.541);
-}
-
-#submitEdit {
-    box-shadow: 6px 5px 6px #b3b3b3eb;
-    margin-top: 30px;
-}
-
-#submitNew {
-    margin-top: 30px;
-    box-shadow: 6px 5px 6px #b3b3b3eb;
-}
-
-.form-group {
-    font-size: 28px;
-    margin-top: 28px;
-}
-
-.form-control {
-    font-size: 22px;
-    box-shadow: 6px 5px 6px #b3b3b343;
-}
-
-.bodySpaceToUse {
-    width: 60%;
-}
-
-.instructions {
-    margin-top: 40px;
-    margin-bottom: 30px;
-    font-size: 38px;
-}
-
-.edit {
-    margin-top: 30px;
-    box-shadow: 6px 5px 6px #b3b3b3eb;
-}
-
-.delete {
-    margin-top: 30px;
-    margin-bottom: 50px;
-    box-shadow: 6px 5px 6px #b3b3b3eb;
-}
-
-.personSelected {
-    width: 40%;
-}
-
-.personImage {
-    height: 306px;
-    width: auto;
-    border-radius: 60px;
 }
 
 .category {
@@ -216,27 +166,53 @@ Error block:
     font-weight: 400;
 }
 
-.personRelation {
-    font-size: 34px;
-    color: black;
-    font-weight: bold;
-    letter-spacing: 1px;
+.personImage {
+    height: 306px;
+    width: auto;
+    border-radius: 60px;
 }
 
-.personName {
-    font-size: 36px;
-    margin-top: 10px;
-    color: black
+.personSelected {
+    width: 40%;
 }
 
-a {
-    color: black;
-    font-weight: bold;
-    letter-spacing: 1px;
+.edit {
+    margin-top: 30px;
+    box-shadow: 6px 5px 6px #b3b3b3eb;
 }
 
-a:hover {
-    color: black;
-    text-decoration: underline;
+.delete {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    box-shadow: 6px 5px 6px #b3b3b3eb;
 }
 
+.bodySpaceToUse {
+    width: 60%;
+}
+
+.instructions {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 38px;
+}
+
+.form-group {
+    font-size: 28px;
+    margin-top: 28px;
+}
+
+.form-control {
+    font-size: 22px;
+    box-shadow: 6px 5px 6px #b3b3b343;
+}
+
+#submitNew {
+    margin-top: 30px;
+    box-shadow: 6px 5px 6px #b3b3b3eb;
+}
+
+#submitEdit {
+    box-shadow: 6px 5px 6px #b3b3b3eb;
+    margin-top: 30px;
+} */
