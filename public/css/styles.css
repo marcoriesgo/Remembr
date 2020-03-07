@@ -103,7 +103,7 @@ h2 {
     border-color: #1d1b1b;
     border-radius: 25px;
     background: linear-gradient(307deg, rgb(28, 155, 224) 0%, #000046 100%);
-    box-shadow: 6px 5px 6px #b3b3b3eb;
+    box-shadow: 0 0 5px 2px #6d6d6d; /* mark the inset */
     opacity: 0.70;
     transition: opacity 0.3s ease-in-out;
     -moz-transition: opacity 0.3s ease-in-out;
@@ -132,8 +132,6 @@ h2 {
     border-radius: 15%;
     border: 4px solid black;
 }
-
-
 
 .homeButton {
     position: absolute;
@@ -260,7 +258,7 @@ a:hover {
     border-color: #1d1b1b;
     border-radius: 25px;
     background: linear-gradient(307deg, rgb(28, 155, 224) 0%, #000046 100%);
-    box-shadow: 6px 5px 6px #b3b3b3eb;
+    box-shadow: 0 0 5px 2px #6d6d6d; /* mark the inset */
     opacity: 0.70;
     transition: opacity 0.3s ease-in-out;
     -moz-transition: opacity 0.3s ease-in-out;
@@ -323,21 +321,20 @@ a:hover {
 .occassionsItem {
     display: inline-block;
     width: 350px;
-    height: 200px;
+    height: auto;
     margin: 35px 20px 35px 20px;
     border-width: 4px; 
     border-style: solid;
     border-color: black;
     border-radius: 25px;
-    background: beige;
-    box-shadow: 6px 5px 6px #b3b3b3eb;
+    background: linear-gradient(307deg, rgb(28, 155, 224) 0%, #000046 100%);
+    box-shadow: 0 0 5px 2px #6d6d6d; /* mark the inset */
     opacity: 0.70;
     transition: opacity 0.3s ease-in-out;
     -moz-transition: opacity 0.3s ease-in-out;
     -webkit-transition: opacity 0.3s ease-in-out;
 
 }
-
 
 .occassionsItem:hover {
     opacity: 1.0;
@@ -349,29 +346,79 @@ a:hover {
 #occassionName {
     font-size: 30px;
     margin-top: 18px;
-    color: black;
+    color: white;
     margin-bottom: 5px;
 }
 
 #occassionDate {
     font-size: 24px;
-    color: black;
+    color: white;
     letter-spacing: 1px;
     margin-top: 10px;
+    font-weight: bold;
 }
 
 .occassionsItem a {
-    color: black;
+    color: white;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
 .occassionsItem a:hover {
-    color: black;
+    color: white;
     text-decoration: underline;
 }
 
 .deleteEvent {
-    margin-top: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
+#highImportance {
+    font-size: 22px;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    background-color: red;
+    width: 80%;
+    border-radius: 15px;
+    
+}
+
+#highImportance p {
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+#mediumImportance {
+    font-size: 22px;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    background-color: orange;
+    width: 80%;
+    border-radius: 15px;
+}
+
+#mediumImportance p {
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+#lowImportance {
+    font-size: 22px;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    background-color: green;
+    width: 80%;
+    border-radius: 15px;
+}
+
+#lowImportance p {
+    padding-top: 7px;
+    padding-bottom: 7px;
+}

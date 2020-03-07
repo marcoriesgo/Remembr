@@ -23,6 +23,13 @@
                         <div class="occassionsItem">
                             <div id="occassionName"><a href="/memories/occassions/<%=occassions.id%>"><%= occassions.occassionName %></a></div>
                             <div id="occassionDate"><%=occassions.occassionDate %></div>
+                            <% if (occassions.occassionImportance == "High") { %>
+                                <div id="highImportance"><p>High Importance</p></div>
+                                <% } else if (occassions.occassionImportance == "Medium") { %>  
+                                    <div id="mediumImportance"><p>Medium Importance</p></div>
+                                <% } else { %>
+                                    <div id="lowImportance"><p>Low Importance</p></div>  
+                            <% } %>
                             <form class="deleteEvent" action="/memories/occassions/<%=occassions.id%>?_method=DELETE" method="POST">
                                 <div class="occassionCompleteButton"><input type="submit" type="button" class="btn btn-success btn-lg" value="Completed"></div>
                             </form> 
