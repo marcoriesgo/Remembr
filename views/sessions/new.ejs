@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>      
+        <h1>SIGN IN</h1>
+        <form action="/sessions" method="POST">
+            <input type="text" name="username" placeholder="username"/>
+            <input type="password" name="password" placeholder="password" />
+            <input type="submit" value="Log In" />
+        </form>
+    </body>
+</html>
+
+//
+<% if(typeof currentUser != 'undefined') { %>
+    Welcome <%=currentUser.username%>!
+    <% } else { %>
+    <p>User entered does not exist.</p> 
+    <% } %>
+    </h1>
+    <% if(typeof currentUser != 'undefined') { %>
+    <main>
+    Welcome to the <a href="/app">party</a>
+    </main>
+    <% } %>
+    <nav>
+    <ul>
+        <li><a href="/sessions/new">Log In</a></li>
+        <li><a href="/users/new">Register</a></li>
+        <% if(typeof currentUser != 'undefined') { %>
+        <li>
+        <form action="/sessions?_method=DELETE" method="POST">
+            <input type="submit" value="Logout" />
+        </form>
+        </li>
+        <% } %>
+    </ul>
+    </nav>   

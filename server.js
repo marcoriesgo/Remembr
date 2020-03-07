@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const port = 3000;
+const session = require("express-session");
 
 //Call for the methods controller:
 const memoriesController = require('./controllers/memories');
@@ -41,6 +42,13 @@ app.use(methodOverride('_method'));
 //Parse the info from the forms:
 app.use(bodyParser.urlencoded({extended : false}));
 
+//Session:
+app.use(session({
+  secret: "feedmeseymour", //some random string
+  resave: false,
+  saveUninitialized: false
+}));
+
 //Make the JSON Parser:
 app.use(bodyParser.json());
 
@@ -50,8 +58,25 @@ app.use('/memories', memoriesController);
 
 //If localhost:'port' is called, redirect it to /memories:
 app.get('/', (req, res) => {
-    res.redirect('/memories');
+    res.render('memories/index.ejs', {
+      currentUser: req.session.currentUser
+    });
 });
+
+//Renders the login page
+app.get('/app', (req, res)=>{
+  if(req.session.currentUser){
+      res.render('memories/index.ejs');
+  } else {
+      res.redirect('/sessions/new');
+  }
+});
+
+//Auth controllers:
+const usersController = require('./controllers/users.js');
+app.use('/users', usersController);
+const sessionsController = require('./controllers/sessions.js');
+app.use('/sessions', sessionsController);
 
 //App listener:
 app.listen(port, () => {

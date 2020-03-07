@@ -30,6 +30,60 @@ body {
     top: 15px
 }
 
+.onboardingPage {
+    background-image: url(https://images.pexels.com/photos/2385569/pexels-photo-2385569.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    height: 1260px;
+}
+
+.onboardingPage .container-fluid {
+    background: rgba(0, 0, 0, 0.701);
+    padding-bottom: 30px;
+    width: 70%;
+    border-radius: 80px;
+    max-width: 1055px;
+} 
+
+.title {
+    font-size: 48px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    color: white;
+    padding-top: 40px;
+}
+.welcomeMessage h3 {
+    font-size: 40px;
+    margin-top: 40px;
+    color: white;
+}
+
+.welcomeMessage {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.onboardForm {
+    width: 60%;
+    margin-top: 60px;
+    padding-bottom: 40px;
+    border-radius: 40px;
+}
+
+.onboardForm h3 {
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-size: 34px;
+}
+
+.loginButton {
+    width: 60%;
+    margin-bottom: 30px;
+}
+
+.signupButton {
+    width: 60%;
+    margin-top: 40px;
+}
+
 .header {
     padding-top: 20px;
     font-size: 48px;

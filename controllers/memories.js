@@ -11,12 +11,27 @@ const Places = require('../models/places');
 const Occassions = require('../models/occassions');
 
 
-
 // Create the first mvp REST routes:
 // Index Route to Homepage:
 memories.get('/', (req, res) => {
-      res.render('./memories/index.ejs');
+      res.render('./memories/onboarding.ejs');
 });
+
+/*
+//
+AUTHENTICATION ROUTES:
+//
+*/
+const User = require('../models/users.js');
+const bcrypt = require('bcrypt');
+
+
+
+
+
+
+
+
 
 
 /*
