@@ -2,6 +2,7 @@
 const express = require('express');
 const memories = express.Router();
 
+
 //3 different for each category
 
 //Access the memories model (database) in order to make routes to call it:
@@ -25,12 +26,41 @@ AUTHENTICATION ROUTES:
 const User = require('../models/users.js');
 const bcrypt = require('bcrypt');
 
+memories.get('/signup', (req, res) => {
+  res.render('./memories/signup.ejs');
+});
+
+memories.get('/login', (req, res) => {
+  res.render('./memories/login.ejs');
+});
+
+//POST Route for when the user signs up to the app:
+memories.post('/signup', (req, res)=>{
+  req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
+  User.create(req.body, (err, createdUser)=>{
+      res.redirect('/home');
+  });
+});
 
 
+//POST ROUTE IN ORDER TO CHECK THE LOGIN FORM FOR CREDENTIALS:
+memories.post('/login', (req, res)=>{
+  User.findOne({ username: req.body.username },(err, foundUser) => {
+      if( bcrypt.compareSync(req.body.password, foundUser.password) ){
+          req.session.currentUser = foundUser;
+          res.redirect('/home');
+      } else {
+          res.redirect('/wrongpassword');
+      }
+  });
+});
 
-
-
-
+//Delete route to delete the session:
+memories.delete('/logout', (req, res) => {
+  req.session.destroy(()=>{
+      res.redirect('/memories');
+  });
+})
 
 
 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remembr</title>
+</head>
+<body>
+    <div class="col-xs-1" align="center">
+        <div class="onboardingPage">
+            <div class="heading">
+                <img class="logo" src="/images/logo.png"/>
+                <h1 class="header">Remembr</h1>
+            </div>
+            <div class="container-fluid">
+                <div class="title" id="welcome">Welcome!</div>
+                <div class="welcomeMessage">
+                    <h3>We know remembering everything can be hard...</h3>
+                    <h3>That's why we are here to help you.</h3>
+                </div>
+                <div class="onboardForm">
+                    <div class="signUpMessage"><p>Login</p></div>
+                    <form class="signUpForm" action="/memories/login" method="POST">
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" class="form-control" name="username" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" class="form-control" name="password" placeholder="">
+                        </div>
+                        <input class="btn btn-outline-warning btn-lg btn-block" id="enterSiteButton" type="submit" name="" value="Login">
+                    </form>
+                    <div class="cancelButton"><a type="button" class="btn btn-outline-danger btn-lg" id="enterSiteButton" href="/memories">Cancel</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
