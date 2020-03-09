@@ -58,15 +58,15 @@ app.use('/memories', memoriesController);
 
 //If localhost:'port' is called, redirect it to /memories:
 app.get('/', (req, res) => {
-    res.render('memories/onboarding.ejs', {
-      currentUser: req.session.currentUser
-    });
+    res.render('memories/onboarding.ejs');
 });
 
 app.get('/home', (req, res) => {
-  res.render('memories/index.ejs', {
-    currentUser: req.session.currentUser
-  });
+  res.render('memories/index.ejs');
+});
+
+app.get('/login', (req, res) => {
+  res.render('memories/login.ejs');
 });
 
 app.get('/logout', (req, res) => {
