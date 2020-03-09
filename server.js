@@ -44,7 +44,7 @@ app.use(bodyParser.urlencoded({extended : false}));
 
 //Session:
 app.use(session({
-  secret: "feedmeseymour", //some random string
+  secret: "marcoriesgo", //some random string
   resave: false,
   saveUninitialized: false
 }));

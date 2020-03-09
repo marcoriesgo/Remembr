@@ -10,13 +10,14 @@
   <title>New Person</title>
 </head>
 <body>
+    <% if(currentUser) { %>
     <div class="col-xs-1" align="center">
         <div class="heading">
             <img class="logo" src="/images/logo.png"/>
             <h1 class="header">Remembr</h1>
             <div class="backButton"><a type="button" class="btn btn-warning btn-lg" href="/memories/places">Return to Places</a></div>
         </div>
-    <div class="container">
+        <div class="container">
         <h3 class="instructions">Add A New Place</h3>
         <div class="bodySpaceToUse">
             <form action="/memories/places" method="POST">
@@ -41,5 +42,8 @@
         </div>
     </div>
   </div>
+  <% } else { %>
+    <h1>User must be logged in</h1>
+  <% } %>
 </body>
 </html>

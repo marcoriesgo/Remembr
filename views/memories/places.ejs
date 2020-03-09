@@ -9,6 +9,7 @@
     <title>Places</title>
 </head>
 <body>
+    <% if(currentUser) { %>
     <div class="col-xs-1" align="center">
         <div class="heading">
             <img class="logo" src="/images/logo.png"/>
@@ -29,5 +30,8 @@
             </div>
         </div>
     </div>
+    <% } else { %>
+        <h1>User must be logged in</h1>
+    <% } %>
 </body>
 </html>

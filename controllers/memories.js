@@ -83,13 +83,18 @@ memories.get('/people', (req, res) => {
       if(err) {
         console.log(err); 
       };
-      res.render('./memories/people.ejs', { people });
+      res.render('./memories/people.ejs', { 
+        people,
+        currentUser: req.session.currentUser
+      });
     });
 });
 
 // Create the NEW person memory route: (always above id routes):
 memories.get('/people/new', (req, res) => {
-    res.render('./memories/newperson.ejs');
+    res.render('./memories/newperson.ejs', {
+      currentUser: req.session.currentUser
+    });
 });
 
 
@@ -99,8 +104,10 @@ memories.get ('/people/:id', (req, res) => {
       if(err) {
         console.log(err); 
       };
-      res.render('./memories/showperson.ejs', 
-      { people: people });
+      res.render('./memories/showperson.ejs', { 
+        people: people,
+        currentUser: req.session.currentUser
+       });
     });
 });
 
@@ -110,7 +117,9 @@ memories.post ('/people', (req, res) => {
       if(err) { 
         res.send(err);
       } else {
-        res.redirect('/memories/people');
+        res.redirect('/memories/people', {
+          currentUser: req.session.currentUser
+        });
       }
     });
 });
@@ -121,8 +130,10 @@ memories.get('/people/:id/edit', (req, res) => {
           if(err) { 
             console.log(err); 
           }
-          res.render('./memories/editperson.ejs', 
-          {people: people}
+          res.render('./memories/editperson.ejs', {
+            people: people,
+            currentUser: req.session.currentUser
+          }
         );
     });
 });
@@ -168,13 +179,18 @@ memories.get('/places', (req, res) => {
       if(err) {
         console.log(err); 
       };
-      res.render('./memories/places.ejs', { places });
+      res.render('./memories/places.ejs', { 
+        places,
+        currentUser: req.session.currentUser
+       });
     });
 });
 
 // Create the NEW person memory route: (always above id routes):
 memories.get('/places/new', (req, res) => {
-    res.render('./memories/newplace.ejs');
+    res.render('./memories/newplace.ejs', {
+      currentUser: req.session.currentUser
+    });
 });
 
 // Make a SHOW person memories route:
@@ -184,7 +200,9 @@ memories.get ('/places/:id', (req, res) => {
         console.log(err); 
       };
       res.render('./memories/showplaces.ejs', 
-      { places: places });
+      { places: places,
+        currentUser: req.session.currentUser
+       });
     });
 });
 
@@ -206,7 +224,9 @@ memories.get('/places/:id/edit', (req, res) => {
             console.log(err); 
           }
           res.render('./memories/editplace.ejs', 
-          {places: places}
+          {places: places,
+            currentUser: req.session.currentUser
+          }
         );
     });
 });
@@ -251,13 +271,18 @@ memories.get('/occassions', (req, res) => {
       if(err) {
         console.log(err); 
       };
-      res.render('./memories/occassions.ejs', { occassions });
+      res.render('./memories/occassions.ejs', { 
+        occassions,
+        currentUser: req.session.currentUser
+       });
     });
 });
 
 // Create the NEW person memory route: (always above id routes):
 memories.get('/occassions/new', (req, res) => {
-    res.render('./memories/newoccassion.ejs');
+    res.render('./memories/newoccassion.ejs', {
+      currentUser: req.session.currentUser
+    });
 });
 
 // Make a SHOW occassion memories route:
@@ -267,7 +292,9 @@ memories.get ('/occassions/:id', (req, res) => {
         console.log(err); 
       };
       res.render('./memories/showoccassions.ejs', 
-      { occassions: occassions });
+      { occassions: occassions,
+        currentUser: req.session.currentUser
+       });
     });
 });
 
@@ -289,7 +316,9 @@ memories.get('/occassions/:id/edit', (req, res) => {
             console.log(err); 
           }
           res.render('./memories/editoccassion.ejs', 
-          {occassions: occassions}
+          {occassions: occassions,
+            currentUser: req.session.currentUser
+          }
         );
     });
 });
