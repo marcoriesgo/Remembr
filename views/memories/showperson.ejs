@@ -8,8 +8,7 @@
     <% if(currentUser) { %>
     <div class="col-xs-1" align="center">
         <div class="heading">
-            <img class="logo" src="/images/logo.png"/>
-            <h1 class="header">Remembr</h1>
+            <%- include('../partials/title.ejs') %>
             <div class="backButton"><a type="button" class="btn btn-warning btn-lg" href="/memories/people">Back to People</a></div>
         </div>
         <div class="personContainer">
