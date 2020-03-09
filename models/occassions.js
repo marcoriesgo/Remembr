@@ -6,7 +6,7 @@ const Schema = mongoose.Schema;
 const occassionsSchema = new Schema({
     occassionName: String,
     occassionDate: String,
-    occassionImportance: String,
+    occassionImportance: Date,
     occassionNotes: String
 });
 

@@ -12,11 +12,13 @@
             <div class="homeButton"><a type="button" class="btn btn-warning btn-lg" href="/logout">Log Out</a></div>
         </div>
         <div class="container-fluid">
-            <h2>Your Memories</h2>
+            <div class="categories">
+                <h2>Categories</h2>
+            </div>
             <div class="linkToPage">
-                <a href="/memories/people"><img class="linkImage" src="https://images.pexels.com/photos/1694649/pexels-photo-1694649.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="people" style="width: 100%; height: 100%;" ></a>
+                <a href="/memories/people"><img class="linkImage" src="images/contacts.jpeg" alt="people" style="width: 100%; height: 100%;" ></a>
                 <div class="imageLinkText">
-                    <h3>People</h3>
+                    <h3>Network</h3>
                 </div>
             </div>
             <div class="linkToPage">
@@ -26,13 +28,14 @@
                 </div>
             </div>
             <div class="linkToPage">
-                <a href="/memories/occassions"><img class="linkImage" src="https://images.pexels.com/photos/3171157/pexels-photo-3171157.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="occassions" style="width: 100%; height: 100%;"></a>
+                <a href="/memories/occassions"><img class="linkImage" src="images/gathering.jpeg" alt="occassions" style="width: 100%; height: 100%;"></a>
                 <div class="imageLinkText">
-                    <h3>Occassions</h3>
+                    <h3>Events</h3>
                 </div>
             </div>
         </div>
     </div>
+    <%- include('../partials/footer.ejs') %>
     <% } else { %>
         <%- include('../partials/newsession.ejs') %>
     <% } %>

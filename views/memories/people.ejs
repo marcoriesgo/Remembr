@@ -12,8 +12,8 @@
             <div class="homeButton"><a type="button" class="btn btn-warning btn-lg" href="/home">Return to Home Page</a></div>
         </div>
         <div class="container-flex">
-            <h2>My People</h2>
-            <div class="newItemButton"><a type="button" class="btn btn-warning btn-lg btn-block" href="/memories/people/new">Add A Person</a></div>
+            <h2>Community Network</h2>
+            <div class="newItemButton"><a type="button" class="btn btn-warning btn-lg btn-block" href="/memories/people/new">Expand The Network</a></div>
             <div class="container-flex">
                     <% people.forEach(function(people) { %>
                     <div class="personItem">
@@ -25,6 +25,7 @@
                 </div>
         </div>
     </div>
+    <%- include('../partials/footer.ejs') %>
     <% } else { %>
         <%- include('../partials/newsession.ejs') %>
     <% } %>

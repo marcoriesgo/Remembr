@@ -12,8 +12,8 @@
             <div class="homeButton"><a type="button" class="btn btn-warning btn-lg" href="/home">Return to Home Page</a></div>
         </div>
         <div class="container-flex">
-            <h2>Occassions</h2>
-            <div class="newItemButton"><a type="button" class="btn btn-warning btn-lg btn-block" href="/memories/occassions/new">Add An Occassion</a></div>
+            <h2>Community Events</h2>
+            <div class="newItemButton"><a type="button" class="btn btn-warning btn-lg btn-block" href="/memories/occassions/new">Share A New Event</a></div>
             <div class="cardsContainer">
                     <% occassions.forEach(function(occassions) { %>
                         <div class="occassionsItem">
@@ -34,6 +34,7 @@
                 </div>
         </div>
     </div>
+    <%- include('../partials/footer.ejs') %>
     <% } else { %>
         <%- include('../partials/newsession.ejs') %>
     <% } %>
