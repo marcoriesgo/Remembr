@@ -358,7 +358,15 @@ memories.get('/seed/newmemories', (req, res) => {
     personIntro: "Los Angeles Neurologist working out of Century City."
     },
     {
-    personName: "Dr. Daniel C Slavin Ph.D.",
+    personName: "Joseph K.",
+    personProfession: "Social Worker",
+    personImg: "https://d1z3744m6z2h75.cloudfront.net/aws/photo/450X450/87/26545587_UxmY2dFnzlOrx1pPDptW4K8duF1f00",
+    personBirthday: "July 13",
+    personPhone: "(666) 541-7026",
+    personIntro: "Hi friends, my name is Joseph and I work with a wide range of elderly patients. I have worked with both male/female clients for the last 10 years to make sure they are safe, clean and HAPPY. I love to play music specific to my client's tastes and generation. "
+    },
+    {
+    personName: "Dr. Daniel C Slavin",
     personProfession: "Psychotherapist",
     personImg: "https://cdn0.sussexdirectories.com/rms/rms_photos/sized/22/16/81622-1512334-3_320x400.jpg?pu=1558799799",
     personBirthday: "February 7",
@@ -366,28 +374,20 @@ memories.get('/seed/newmemories', (req, res) => {
     personIntro: "I will help you break unhealthy habits and improve your self-acceptance and a sense of well-being. I set clear and obtainable goals so that you know how to look at your issues and are able to solve them on your own after therapy."
     },
     {
-    personName: "",
-    personProfession: "",
-    personImg: "",
-    personBirthday: "",
-    personPhone: "",
-    personIntro: ""
+    personName: "Marlena H.",
+    personProfession: "Senior Caretaker",
+    personImg: "https://d1z3744m6z2h75.cloudfront.net/aws/photo/450X450/14/32861014_qJ4Idlrd4PyGg8MASAX1obTRTrSAnS70",
+    personBirthday: "October 4",
+    personPhone: "(701) 937-3915",
+    personIntro: "Hello, my name is Marlena. I have 6 years of experience. I love my work as a caregiver, and have completed several home health aide/caregiver certification courses, including a CPR course. I enjoy assisting residents with daily living, medication management, motivation to engage in activities to ensure a proactive, and fulfilling schedule."
     },
     {
-    personName: "",
-    personProfession: "",
-    personImg: "",
-    personBirthday: "",
-    personPhone: "",
-    personIntro: ""
-    },
-    {
-    personName: "",
-    personProfession: "",
-    personImg: "",
-    personBirthday: "",
-    personPhone: "",
-    personIntro: ""
+    personName: "Maria Gray",
+    personProfession: "Brainspotting Therapy",
+    personImg: "https://images.squarespace-cdn.com/content/v1/52059b6ce4b0f89d326be721/1550254539848-10IMCZ00XTCDG4X6S9J3/ke17ZwdGBToddI8pDm48kGEcGT5Lmpw7k7qUWQzidAdZw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVGMZphpTisNhlSLqi_BwGYmY10dv5NvXHNvbD2GTtIdF-pEqyd2uUoM_pOSRDuY4IQ/Maria+Gray+Los+Angeles+Therapist.jpg",
+    personBirthday: "March 9",
+    personPhone: "(310) 319-6500",
+    personIntro: "My work is collaborative and tailored to your specific needs. Some clients come in once a week for individual therapy; others prefer group therapy or a combination of individual and group psychotherapy."
     }
   ];
   const newPlaces = [
@@ -416,28 +416,28 @@ memories.get('/seed/newmemories', (req, res) => {
     placeImg: "https://www.bergelectric.com/wp-content/uploads/2018/04/BC002.jpg"    
     },
     {
-    placeName: "",
-    placeLocation: "",
-    placeActivity: "",
-    greatFor: "",
-    placeNotes: "",
-    placeImg: ""
+    placeName: "The Grove",
+    placeLocation: "189 The Grove Dr, Los Angeles, CA 90036",
+    placeActivity: "Shopping Mall",
+    greatFor: "Entertainment",
+    placeNotes: "High-end shopping mall features trendy retailers, restaurants & a theater amid a bustling promenade.",
+    placeImg: "https://cdn2.lamag.com/wp-content/uploads/sites/6/2016/06/Grove_h.jpg"
     },
     {
-    placeName: "",
-    placeLocation: "",
-    placeActivity: "",
-    greatFor: "",
-    placeNotes: "",
-    placeImg: ""
+    placeName: "Westfield Century City",
+    placeLocation: "10250 Santa Monica Blvd, Los Angeles, CA 90067",
+    placeActivity: "Shopping Mall",
+    greatFor: "Shopping",
+    placeNotes: "Find your favourite store and the newest shops for fashion, beauty, lifestyle and fresh food only at Westfield Century City.",
+    placeImg: "https://www.discoverlosangeles.com/sites/default/files/styles/hero/public/business/westfield-century-city/h_2000-crm-la-fire-pit_0b570d65-74a6-467e-8fcb291695bc3eb0_0ba3dd96-9e5d-4c05-ae6a79c452e326b8.jpg?itok=YgNHziWz"
     },
     {
-    placeName: "",
-    placeLocation: "",
-    placeActivity: "",
-    greatFor: "",
-    placeNotes: "",
-    placeImg: ""
+    placeName: "Echo Park",
+    placeLocation: "1815 Montrose St Los Angeles, CA 90026",
+    placeActivity: "Park Lake",
+    greatFor: "Walking",
+    placeNotes: "Echo Park is a scruffy Eastside neighborhood with vibrant street murals and a lively nightlife scene. Indie music venues, trendy bars and taco trucks can be found along Sunset Boulevard, along with coffee shops, vegan eats and quirky boutiques. ",
+    placeImg: "https://img.theculturetrip.com/wp-content/uploads/2018/12/echo-park-instagram.jpg"
     }
    ];
    const newEvents = [
@@ -460,22 +460,22 @@ memories.get('/seed/newmemories', (req, res) => {
     occassionNotes: "Everything you need to know about Medicare through a game of bingo. Get snacks, play bingo, and learn about original Medicare"  
     },
     {
-      occassionName: "",
-      occassionDate: "",
-      occassionPlace: "",
-      occassionNotes: ""
+      occassionName: "Intermediate Hula Club",
+      occassionDate: "March 25, 2020 at 9am",
+      occassionPlace: "Buena Park Senior Center",
+      occassionNotes: "Hula is a low to medium impact exercise, easing the strain on the joints. Dancing is also good for your abs, back and hips and helps to tone and strengthen your legs."
     },
     {
-      occassionName: "",
-      occassionDate: "",
-      occassionPlace: "",
-      occassionNotes: ""
+      occassionName: "Senior Symposium & Fair",
+      occassionDate: "May 16, 2020 at 9am",
+      occassionPlace: "ONEgeneration Enrichment Center",
+      occassionNotes: "ONEgeneration Senior Enrichment Center Presents: 12th Annual Senior Symposium & Senior Job/Volunteer Fair Saturday, May 16th, 2020 9:00am-2:00pm."
     },
     {
-      occassionName: "",
-      occassionDate: "",
-      occassionPlace: "",
-      occassionNotes: ""
+      occassionName: "Seniors Improv Comedy",
+      occassionDate: "May 8, 2020 at 9pm",
+      occassionPlace: "The Pack Theater",
+      occassionNotes: "The Seniors Improv Comedy with Landry & Summers and Improvisers over 50! This IS Your parent's improv and its all good!"
     }
    ];
 
