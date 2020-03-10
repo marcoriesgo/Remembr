@@ -17,10 +17,12 @@ function update(response) {
     $('#quote').empty();
     $('#author').empty();
     $('#quote').append("'" + response.quoteText + "'");
-    $('#author').append("-" + response.quoteAuthor);
+    $('#author').append("- " + response.quoteAuthor);
     console.log(response);
 }
   
 function handleErr(jqxhr, textStatus, err) {
-    console.log("AJAX API Call: " + textStatus + ", " + err);
+    console.log("AJAX Quotes API Call: " + textStatus + ", " + err);
 }
+
+
