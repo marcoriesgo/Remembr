@@ -13,6 +13,7 @@
         </div>
         <div class="container-flex">
             <h2>Community Network</h2>
+            <h3 id="categoryIntro">View and share relevant contacts in the dementia community to make friends, view doctors, and grow your circle.</h3>
             <div class="newItemButton"><a type="button" class="btn btn-warning btn-lg btn-block" href="/memories/people/new">Expand The Network</a></div>
             <div class="container-flex">
                     <% people.forEach(function(people) { %>
@@ -24,8 +25,8 @@
                     <% }); %>
                 </div>
         </div>
-        <%- include('../partials/footer.ejs') %>
     </div>
+    <%- include('../partials/footer.ejs') %>
     <% } else { %>
         <%- include('../partials/newsession.ejs') %>
     <% } %>

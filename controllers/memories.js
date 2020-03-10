@@ -334,37 +334,105 @@ memories.delete('/occassions/:id', (req, res) => {
 
 /*
 //
-POTENTIAL SEED ROUTES:
+SEED ROUTES:
 //
 */
 
-// //Create a seed route to call trial memories:
-// memories.get('/seed/newmemories', (req, res) => {
-//     const newMemories = [
-//     {
-//     personName: "Laura",
-//     personImg: "https://livingcities.s3.amazonaws.com/people/432/display.jpg",
-//     personRelation: "Mom"
-//     },
-//     {
-//     placeName: "LA Fitness",
-//     placeImg: "https://media.glassdoor.com/l/39/92/ea/66/typical-new-look-of-an-la-fitness.jpg",
-//     placeActivity: "Gym"
-//     },
-//     {
-//     occassionName: "Marco Birthday",
-//     occassionDate: "July 8"
-//     }
-//     ];
+//Create a seed route to call people memories:
+memories.get('/seed/newmemories', (req, res) => {
+   const newPeople = [
+   {
+    personName: "Judy B. Iwanier, MSW",
+    personProfession: "Doctor",
+    personImg: "https://cdn4.sussexdirectories.com/rms/rms_photos/sized/94/63/326394-945486-2_320x400.jpg?pu=1495324926",
+    personBirthday: "December 12",
+    personPhone: "(310) 423-0736",
+    personIntro: "West Hollywood doctor specializing in clinical social work."
+    },
+    {
+    personName: "Lisa G Cook MD",
+    personProfession: "Neurologist",
+    personImg: "https://s3-us-west-1.amazonaws.com/co-directory-images/lisa-cook-91172618.jpg",
+    personBirthday: "June 17",
+    personPhone: "(310) 277-9534",
+    personIntro: "Los Angeles Neurologist working out of Century City."
+    },
+    {
+    personName: "Dr. Daniel C Slavin Ph.D.",
+    personProfession: "Psychotherapist",
+    personImg: "https://cdn0.sussexdirectories.com/rms/rms_photos/sized/22/16/81622-1512334-3_320x400.jpg?pu=1558799799",
+    personBirthday: "February 7",
+    personPhone: "(310) 553-9020",
+    personIntro: "I will help you break unhealthy habits and improve your self-acceptance and a sense of well-being. I set clear and obtainable goals so that you know how to look at your issues and are able to solve them on your own after therapy."
+    }
+  ];
+  const newPlaces = [
+    {
+    placeName: "Cedars-Sinai Neurology",
+    placeLocation: "8635 W 3rd St #850W, Los Angeles, CA 90048",
+    placeActivity: "Medical Clinic",
+    placeNotes: "Neurology center at Cedars-Sinai hospital on the border between Beverly Hills and West Hollywood.",
+    placeImg: "https://upload.wikimedia.org/wikipedia/commons/9/9e/Cedars-Sinai_West.jpg"    
+    },
+    {
+    placeName: "Kaiser Permanente",
+    placeLocation: "6041 Cadillac Ave, Los Angeles, CA 90034",
+    placeActivity: "Neurology Clinic",
+    placeNotes: "Neurology clinic directed by Paul Boris Kazimiroff, MD and owned by Kaiser Permanente.",
+    placeImg: "https://thrive.kaiserpermanente.org/care-near-you/southern-california/west-los-angeles/wp-content/uploads/sites/14/2013/11/186bc70757bb85f6e270.png"    
+    },
+    {
+    placeName: "Beverly Center",
+    placeLocation: "8500 Beverly Blvd, Los Angeles, CA 90048",
+    placeActivity: "Shopping Center",
+    placeNotes: "High-end shopping mall offers luxury designer shops, well-known department stores & restaurants.",
+    placeImg: "https://www.bergelectric.com/wp-content/uploads/2018/04/BC002.jpg"    
+    }
+   ];
+   const newEvents = [
+    {
+    occassionName: "Panthers Annual Senior Fest",
+    occassionDate: "May 2, 2020 at 10:30am",
+    occassionPlace: "1150 East 4th Street, Long Beach, CA 90802",
+    occassionNotes: "Join us during Older American Month with our 4th Annual Senior Fest. We celebrate our nations history with our theme of Suffragists and Suffragents. Our Senior Fest has doubled in size this year."  
+    },
+    {
+    occassionName: "Wellness & Health Fair",
+    occassionDate: "March 21, 2020 at 11am",
+    occassionPlace: "The Salvation Army Long Beach",
+    occassionNotes: "Join us for free health screenings, engage with a panel of speakers, and receive information on how to promote healthy choices (mentally and physically)."  
+    },
+    {
+    occassionName: "Medicare Bingo",
+    occassionDate: "March 29, 2020 at 2pm",
+    occassionPlace: "Staples La Habra Spotlight Space",
+    occassionNotes: "Everything you need to know about Medicare through a game of bingo. Get snacks, play bingo, and learn about original Medicare"  
+    }
+   ];
 
-//     Memory.create(newMemories, (err, memory) => {
-//     if(err) { 
-//         console.log(err); 
-//     }
-//     console.log( "Seed memories created." );
-//     res.redirect('/memories');
-//     });
-// });
+  People.create(newPeople, (err, people) => {
+   if(err) { 
+      console.log(err); 
+    }
+   console.log("Seed people memories created.");
+  });
+
+  Occassions.create(newEvents, (err, events) => {
+    if(err) { 
+        console.log(err); 
+      }
+    console.log("Seed events memories created.");
+  });
+
+  Places.create(newPlaces, (err, places) => {
+    if(err) { 
+        console.log(err); 
+      }
+    console.log("Seed places memories created.");
+    res.redirect('/remembr');
+  });
+});
+
 
 //Use module exports so that the file can be accessed in the server.js:
 //Export this router and then make it a requirement for server.js
