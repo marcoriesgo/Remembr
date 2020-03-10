@@ -71,7 +71,7 @@ body {
 
 .onboardingPage {
     background-image: url(https://images.pexels.com/photos/2385569/pexels-photo-2385569.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
-    height: 100%;
+    height: 1300px;
 }
 
 .onboardingPage .container-fluid {
@@ -81,6 +81,52 @@ body {
     border-radius: 80px;
     max-width: 1055px;
 } 
+
+.introPage {
+    background-image: url(https://images.pexels.com/photos/160767/women-friends-friendship-helping-together-160767.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    height: 1300px;
+}
+.introToRemembr {
+    background: rgba(0, 0, 0, 0.81);
+    margin-top: 12%;
+    width: 60%;
+    height: auto;
+    display: inline-block;
+    border-radius: 40px;
+    color: white;
+    padding-right: 30px;
+    padding-bottom: 3%;
+}
+.cityButtonsContainer {
+    width: 40%;
+    height: auto;
+    float: right;
+    
+}
+
+#introWelcome {
+    margin-top: 10px;
+    padding-top: 15px;
+}
+
+#remembrExplanation {
+    float: left;
+    text-align: left;
+    width: 60%;
+    padding-left: 30px;
+}
+
+#remembrExplanation h3 {
+    margin-bottom: 7%;
+}
+
+.cityButton {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 70%;
+}
+
+
 
 .title {
     font-size: 48px;
@@ -529,5 +575,6 @@ footer {
     color: white;
     background: linear-gradient(300deg, #8f94fb 0%, #4e54c8 100%);
     font-size: 18px;
+    box-shadow: 0 0 5px 2px #6d6d6d;
 }
 

@@ -62,7 +62,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/home', (req, res) => {
-  res.render('memories/index.ejs', {
+  res.render('memories/intro.ejs', {
     currentUser: req.session.currentUser
   });
 });

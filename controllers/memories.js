@@ -38,7 +38,7 @@ memories.get('/login', (req, res) => {
 memories.post('/signup', (req, res)=>{
   req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
   User.create(req.body, (err, createdUser)=>{
-      res.redirect('/login');
+      res.redirect('/home');
   });
 });
 
@@ -71,9 +71,13 @@ PEOPLE ROUTES:
 
 //JSON Route to view the people database
 memories.get('/people/json', (req, res) => {
-  People.find((err, people) => {
-    res.send(people);
-  });
+  if(currentUser !== 'undefined') {
+    People.find((err, people) => {
+      res.send(people);
+    });
+  } else {
+    console.log(err)
+  }
 });
 
 

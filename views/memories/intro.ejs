@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs') %>
+    <title>Remembr</title>
+</head>
+<body>
+    <div class="col-xs-1" align="center">
+        <div class="introPage">
+            <div class="heading">
+            <%- include('../partials/title.ejs') %>
+            </div>
+            <div class="container-fluid">
+                <div class="introToRemembr">
+                    <div class="title" id="introWelcome">Welcome!</div>
+                    <div id="remembrExplanation">
+                        <h3>At Remembr, we're working on creating a community for early-stage dementia patients.</h3>
+                        <h4>You are not alone. With fellow members, you can now share appropriate networking, places to visit, and events. Click on a city to enter the community.</h4>
+                    </div>
+                    <div class="cityButtonsContainer">
+                        <div class="cityButton"><a type="button" class="btn btn-warning btn-lg btn-block" href="/memories/login">Los Angeles, CA</a></div>
+                        <div class="cityButton"><a type="button" class="btn btn-warning btn-lg btn-block" href="/memories/signup">New York City, NY</a></div>
+                        <div class="cityButton"><a type="button" class="btn btn-warning btn-lg btn-block" href="/memories/login">Chicago, IL</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>
