@@ -11,14 +11,16 @@ $('#generateQuote').click(function() {
       })
       .done(update)
       .fail(handleErr);
-  });
-  
-  function update(response) {
-    $('#quote').prepend("'" + response.quoteText + "'");
-    $('#author').prepend("-" + response.quoteAuthor);
+});
+
+function update(response) {
+    $('#quote').empty();
+    $('#author').empty();
+    $('#quote').append("'" + response.quoteText + "'");
+    $('#author').append("-" + response.quoteAuthor);
     console.log(response);
-  }
+}
   
-  function handleErr(jqxhr, textStatus, err) {
+function handleErr(jqxhr, textStatus, err) {
     console.log("AJAX API Call: " + textStatus + ", " + err);
-  }
+}
