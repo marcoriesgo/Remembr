@@ -18,6 +18,30 @@ memories.get('/', (req, res) => {
       res.render('./memories/onboarding.ejs');
 });
 
+
+
+
+//Quotes API Calls:
+const axios = require('axios');
+
+const quote = "";
+const author = "";
+
+axios.get('http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en')
+  .then(response => {
+    console.log(response.data.url);
+    console.log(response.data.explanation);
+  })
+  .catch(error => {
+    console.log(error);
+});
+
+
+
+
+
+
+
 /*
 //
 AUTHENTICATION ROUTES:
@@ -69,16 +93,16 @@ PEOPLE ROUTES:
 //
 */
 
-//JSON Route to view the people database
-memories.get('/people/json', (req, res) => {
-  if(currentUser !== 'undefined') {
-    People.find((err, people) => {
-      res.send(people);
-    });
-  } else {
-    console.log(err)
-  }
-});
+// JSON Route to view the people database
+// memories.get('/people/json', (req, res) => {
+//   if(currentUser !== 'undefined') {
+//     People.find((err, people) => {
+//       res.send(people);
+//     });
+//   } else {
+//     console.log(err)
+//   }
+// });
 
 
 // Main page route:
@@ -169,13 +193,6 @@ PLACES ROUTES:
 //
 */
 
-//JSON Route to view the places database
-memories.get('/places/json', (req, res) => {
-  Places.find((err, places) => {
-    res.send(places);
-  });
-});
-
 //Places Route:
 // Main page route:
 memories.get('/places', (req, res) => {
@@ -262,12 +279,6 @@ OCCASSIONS ROUTES:
 //
 */
 
-//JSON route to vieew the occassions database
-memories.get('/occassions/json', (req, res) => {
-  Occassions.find((err, occassions) => {
-    res.send(occassions);
-  });
-});
 
 // Main page route:
 memories.get('/occassions', (req, res) => {

@@ -9,18 +9,15 @@
         <div class="introPage">
             <div class="heading">
             <%- include('../partials/title.ejs') %>
+            <div class="homeButton"><a type="button" class="btn btn-warning btn-lg" href="/logout">Log Out</a></div>
             </div>
             <div class="container-fluid">
                 <div class="introToRemembr">
                     <div class="title" id="introWelcome">Welcome!</div>
                     <div id="remembrExplanation">
-                        <h3>At Remembr, we're working on creating a community for early-stage dementia patients.</h3>
-                        <h4>You are not alone. With fellow members, you can now share appropriate networking, places to visit, and events. Click on a city to enter the community.</h4>
-                    </div>
-                    <div class="cityButtonsContainer">
-                        <div class="cityButton"><a type="button" class="btn btn-warning btn-lg btn-block" href="/memories/login">Los Angeles, CA</a></div>
-                        <div class="cityButton"><a type="button" class="btn btn-warning btn-lg btn-block" href="/memories/signup">New York City, NY</a></div>
-                        <div class="cityButton"><a type="button" class="btn btn-warning btn-lg btn-block" href="/memories/login">Chicago, IL</a></div>
+                        <h3>At Remembr, we're working on creating a community for early-stage dementia patients in Los Angeles.</h3>
+                        <h4>You are not alone. With fellow members, you can now share networking, places to visit, and events.</h4>
+                        <a type="button" class="btn btn-success btn-lg btn-block" id="continueButton" href="/remembr">Continue</a>
                     </div>
                 </div>
             </div>

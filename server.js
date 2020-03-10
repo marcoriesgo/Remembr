@@ -61,8 +61,15 @@ app.get('/', (req, res) => {
     res.render('memories/onboarding.ejs');
 });
 
+
 app.get('/home', (req, res) => {
   res.render('memories/intro.ejs', {
+    currentUser: req.session.currentUser
+  });
+});
+
+app.get('/remembr', (req, res) => {
+  res.render('memories/index.ejs', {
     currentUser: req.session.currentUser
   });
 });
