@@ -56,7 +56,6 @@ body {
     font-size: 22px;
     color: white;
     margin-top: 15px;
-
     font-weight: bold;
     background-color: rgba(255, 0, 0, 0.673);
     width: 80%;
@@ -72,7 +71,7 @@ body {
 
 .onboardingPage {
     background-image: url(https://images.pexels.com/photos/2385569/pexels-photo-2385569.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
-    height: 100vh;
+    height: 100%;
 }
 
 .onboardingPage .container-fluid {
@@ -522,11 +521,13 @@ a:hover {
 
 
 footer {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    display: block;
+    padding-top: 20px;
+    padding-bottom: 10px;
     width: 100%;
     text-align: center;
-    margin-top: 30vh;
+    margin-top: 47vh;
+    color: white;
+    background: linear-gradient(300deg, #8f94fb 0%, #4e54c8 100%);
+    font-size: 18px;
 }
 
