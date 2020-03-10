@@ -14,7 +14,7 @@ $('#generateQuote').click(function() {
   });
   
   function update(response) {
-    $('#quote').prepend(response.quoteText);
+    $('#quote').prepend("'" + response.quoteText + "'");
     $('#author').prepend("-" + response.quoteAuthor);
     console.log(response);
   }
