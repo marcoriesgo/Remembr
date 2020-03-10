@@ -364,6 +364,30 @@ memories.get('/seed/newmemories', (req, res) => {
     personBirthday: "February 7",
     personPhone: "(310) 553-9020",
     personIntro: "I will help you break unhealthy habits and improve your self-acceptance and a sense of well-being. I set clear and obtainable goals so that you know how to look at your issues and are able to solve them on your own after therapy."
+    },
+    {
+    personName: "",
+    personProfession: "",
+    personImg: "",
+    personBirthday: "",
+    personPhone: "",
+    personIntro: ""
+    },
+    {
+    personName: "",
+    personProfession: "",
+    personImg: "",
+    personBirthday: "",
+    personPhone: "",
+    personIntro: ""
+    },
+    {
+    personName: "",
+    personProfession: "",
+    personImg: "",
+    personBirthday: "",
+    personPhone: "",
+    personIntro: ""
     }
   ];
   const newPlaces = [
@@ -371,6 +395,7 @@ memories.get('/seed/newmemories', (req, res) => {
     placeName: "Cedars-Sinai Neurology",
     placeLocation: "8635 W 3rd St #850W, Los Angeles, CA 90048",
     placeActivity: "Medical Clinic",
+    greatFor: "Psychiatrists",
     placeNotes: "Neurology center at Cedars-Sinai hospital on the border between Beverly Hills and West Hollywood.",
     placeImg: "https://upload.wikimedia.org/wikipedia/commons/9/9e/Cedars-Sinai_West.jpg"    
     },
@@ -378,6 +403,7 @@ memories.get('/seed/newmemories', (req, res) => {
     placeName: "Kaiser Permanente",
     placeLocation: "6041 Cadillac Ave, Los Angeles, CA 90034",
     placeActivity: "Neurology Clinic",
+    greatFor: "Neuroloists",
     placeNotes: "Neurology clinic directed by Paul Boris Kazimiroff, MD and owned by Kaiser Permanente.",
     placeImg: "https://thrive.kaiserpermanente.org/care-near-you/southern-california/west-los-angeles/wp-content/uploads/sites/14/2013/11/186bc70757bb85f6e270.png"    
     },
@@ -385,8 +411,33 @@ memories.get('/seed/newmemories', (req, res) => {
     placeName: "Beverly Center",
     placeLocation: "8500 Beverly Blvd, Los Angeles, CA 90048",
     placeActivity: "Shopping Center",
+    greatFor: "Stores",
     placeNotes: "High-end shopping mall offers luxury designer shops, well-known department stores & restaurants.",
     placeImg: "https://www.bergelectric.com/wp-content/uploads/2018/04/BC002.jpg"    
+    },
+    {
+    placeName: "",
+    placeLocation: "",
+    placeActivity: "",
+    greatFor: "",
+    placeNotes: "",
+    placeImg: ""
+    },
+    {
+    placeName: "",
+    placeLocation: "",
+    placeActivity: "",
+    greatFor: "",
+    placeNotes: "",
+    placeImg: ""
+    },
+    {
+    placeName: "",
+    placeLocation: "",
+    placeActivity: "",
+    greatFor: "",
+    placeNotes: "",
+    placeImg: ""
     }
    ];
    const newEvents = [
@@ -403,10 +454,28 @@ memories.get('/seed/newmemories', (req, res) => {
     occassionNotes: "Join us for free health screenings, engage with a panel of speakers, and receive information on how to promote healthy choices (mentally and physically)."  
     },
     {
-    occassionName: "Medicare Bingo",
+    occassionName: "Medicare Bingo & Snacks",
     occassionDate: "March 29, 2020 at 2pm",
     occassionPlace: "Staples La Habra Spotlight Space",
     occassionNotes: "Everything you need to know about Medicare through a game of bingo. Get snacks, play bingo, and learn about original Medicare"  
+    },
+    {
+      occassionName: "",
+      occassionDate: "",
+      occassionPlace: "",
+      occassionNotes: ""
+    },
+    {
+      occassionName: "",
+      occassionDate: "",
+      occassionPlace: "",
+      occassionNotes: ""
+    },
+    {
+      occassionName: "",
+      occassionDate: "",
+      occassionPlace: "",
+      occassionNotes: ""
     }
    ];
 

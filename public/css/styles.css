@@ -232,7 +232,7 @@ h2 {
     margin-right: 2%;
     margin-top: 40px;
     margin-bottom: 40px;
-    border-radius: 40px;
+    border-radius: 35px;
     opacity: 0.70;
     transition: opacity 0.3s ease-in-out;
     -moz-transition: opacity 0.3s ease-in-out;
@@ -249,8 +249,8 @@ h2 {
 .linkImage {
     width: 100%;
     height: 100%;
-    border-radius: 40px;
-    border: 5px solid rgb(0, 0, 0);
+    border-radius: 35px;
+    border: 4px solid rgb(0, 0, 0);
     box-shadow: 0 0 5px 2px #6d6d6d; /* mark the inset */
 }
 
@@ -279,7 +279,7 @@ h2 {
     width: 350px;
     height: 450px;
     margin: 35px 20px 35px 20px;
-    border-width: 4px; 
+    border-width: 3px; 
     border-style: solid;
     border-color: #1d1b1b;
     border-radius: 25px;
@@ -318,7 +318,7 @@ h2 {
     position: absolute;
     top: 25px;
     right: 60px;
-    box-shadow: 5px 5px 6px rgba(255, 255, 255, 0.541);
+    box-shadow: 5px 5px 6px rgba(255, 255, 255, 0.44);
 }
 
 .newItemButton {
@@ -382,16 +382,18 @@ h2 {
 }
 
 .personImage {
-    height: 350px;
-    width: auto;
-    border-radius: 80px;
+    height: 250px;
+    width: 250px;
+    border-radius: 60px;
+    
+
 }
 
 .personImage .img-fluid {
     height: 100%;
-    width: auto;
-    border-radius: 80px;
-    border: 2px solid rgba(0, 0, 0, 0.769);
+    width: 100%;
+    border-radius: 60px;
+    border: 4px solid black;
 }
 
 .category {
@@ -432,9 +434,9 @@ a:hover {
 .placesItem {
     display: inline-block;
     width: 350px;
-    height: 450px;
+    height: 480px;
     margin: 35px 20px 35px 20px;
-    border-width: 4px; 
+    border-width: 3px; 
     border-style: solid;
     border-color: #1d1b1b;
     border-radius: 25px;
@@ -460,6 +462,9 @@ a:hover {
     margin-top: 18px;
     color: white;
     margin-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 70px;
 }
 
 .placeImage {
@@ -478,10 +483,16 @@ a:hover {
 }
 
 .placeActivity {
-    font-size: 30px;
+    font-size: 26px;
     color: white;
     font-weight: bold;
     letter-spacing: 1px;
+}
+
+.itemGreatFor {
+    color: white;
+    font-size: 23px;
+    margin-top: 5px;
 }
 
 .itemImage {
@@ -502,7 +513,7 @@ a:hover {
 .occassionsItem {
     display: inline-block;
     width: 350px;
-    height: auto;
+    height: 291px;
     margin: 35px 20px 35px 20px;
     border-width: 4px; 
     border-style: solid;
@@ -525,18 +536,21 @@ a:hover {
 }
 
 #occassionName {
-    font-size: 30px;
+    width: 272px;
+    height: 42px;
+    font-size: 28px;
     margin-top: 18px;
     color: white;
-    margin-bottom: 5px;
+    margin-bottom: 40px;
 }
 
 #occassionDate {
-    font-size: 24px;
+    font-size: 21px;
     color: white;
     letter-spacing: 1px;
     margin-top: 10px;
     font-weight: bold;
+    padding-top: 15px;
 }
 
 .occassionsItem a {
@@ -550,16 +564,19 @@ a:hover {
     text-decoration: underline;
 }
 
-.deleteEvent {
-    margin-top: 20px;
-    margin-bottom: 20px;
+
+
+.occassionCompleteButton {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 50%;
+    box-shadow: 5px 5px 6px rgba(255, 255, 255, 0.228);
 }
 
-
 #occassionPlace {
-    font-size: 22px;
+    font-size: 18px;
     color: white;
-    margin-top: 15px;
+    margin-top: 10px;
     margin-bottom: 10px;
     font-weight: bold;
     width: 80%;

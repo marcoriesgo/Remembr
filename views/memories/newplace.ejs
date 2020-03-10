@@ -12,7 +12,7 @@
             <div class="backButton"><a type="button" class="btn btn-warning btn-lg" href="/memories/places">Return to Places</a></div>
         </div>
         <div class="container">
-        <h3 class="instructions">Add A New Place</h3>
+        <h3 class="instructions">Share A New Place</h3>
         <div class="bodySpaceToUse">
             <form action="/memories/places" method="POST">
                 <div class="form-group">
@@ -28,6 +28,10 @@
                     <input type="text" class="form-control" name="placeActivity" placeholder="e.g. Gym">
                 </div>
                 <div class="form-group">
+                    <label for="greatFor">The best thing about this place is:</label>
+                    <input type="text" class="form-control" name="greatFor" placeholder="Enter one word">
+                </div>
+                <div class="form-group">
                     <label for="placeActivity">Notes:</label>
                     <input type="text" class="form-control" name="placeNotes" placeholder="e.g. The staff is lovely.">
                 </div>
@@ -35,7 +39,7 @@
                     <label for="placeImg">Image:</label>
                     <input type="text" class="form-control" name="placeImg" placeholder="Image URL">
                 </div>
-                <input class="btn btn-success btn-lg" id="submitNew" type="submit" name="" value="Add New Place">
+                <input class="btn btn-success btn-lg" id="submitNew" type="submit" name="" value="Share New Place">
             </form>
         </div>
     </div>

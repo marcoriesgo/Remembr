@@ -4,9 +4,10 @@ const Schema = mongoose.Schema;
 
 //Create the places schema:
 const placesSchema = new Schema({
-    placeName: { type: String, required: true },
+    placeName: { type: String, required: true, maxlength: 22 },
     placeLocation: { type: String, required: true },
     placeActivity: { type: String, required: true },
+    greatFor: { type: String, maxlength: 14 },
     placeNotes: String,
     placeImg: String
 });
