@@ -7,6 +7,7 @@ const placesSchema = new Schema({
     placeName: { type: String, required: true },
     placeLocation: { type: String, required: true },
     placeActivity: { type: String, required: true },
+    placeNotes: String,
     placeImg: String
 });
 

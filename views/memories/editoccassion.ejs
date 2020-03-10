@@ -12,7 +12,7 @@
             <div class="backButton"><a type="button" class="btn btn-warning btn-lg" href="/memories/occassions">Back to Occassions</a></div>
         </div>
     <div class="container">
-        <h3 class="instructions">Edit Occassion</h3>
+        <h3 class="instructions">Edit Event</h3>
         <div class="bodySpaceToUse">
             <form class="editForm" action="/memories/occassions/<%=occassions.id%>?_method=PUT" method="POST">
                 <div class="form-group">
@@ -24,12 +24,8 @@
                     <input type="text" class="form-control" name="occassionDate" value="<%=occassions.occassionDate%>">
                 </div>
                 <div class="form-group">
-                    <label for="occassionImportance">Importance:</label>
-                    <select type="text" class="form-control" name="occassionImportance" value="<%=occassions.occassionImportance%>">
-                        <option>High</option>
-                        <option>Medium</option>
-                        <option>Low</option>
-                    </select>
+                    <label for="occassionImportance">Location:</label>
+                    <input type="text" class="form-control" name="occassionPlace" placeholder="<%=occassions.occassionPlace%>">
                 </div>
                 <div class="form-group">
                     <label for="occassionNotes">Notes:</label>

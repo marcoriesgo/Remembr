@@ -5,10 +5,11 @@ const Schema = mongoose.Schema;
 //Create the schema:
 const peopleSchema = new Schema({
     personName: String,
-    personRelation: String,
+    personProfession: String,
     personImg: String,
     personBirthday: String,
-    personNotes: String
+    personPhone: String,
+    personIntro: String
 });
 
 //Create the people model:

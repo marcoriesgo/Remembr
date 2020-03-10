@@ -16,12 +16,14 @@
                     <h4 class="category">Name:</h4>
                     <p class="description"><%=people.personName %></p>
                     <div class="personImage"><img src="<%= people.personImg %>" alt="<%= people.personName %>" class="img-fluid"></div>
-                    <h4 class="category">Relationship:</h4>
-                    <p class="description"><%=people.personRelation %></p>
+                    <h4 class="category">Profession:</h4>
+                    <p class="description"><%=people.personProfession %></p>
                     <h4 class="category">Birthday:</h4>
                     <p class="description"><%=people.personBirthday %></p>
-                    <h4 class="category">Notes:</h4>
-                    <p class="description"><%=people.personNotes %></p>
+                    <h4 class="category">Phone:</h4>
+                    <p class="description"><%=people.personPhone %></p>
+                    <h4 class="category">Introduction:</h4>
+                    <p class="description"><%=people.personIntro %></p>
                     <div class="edit"><a type="button" class="btn btn-primary btn-lg btn-block" href="/memories/people/<%=people.id%>/edit">Edit</a></div>             
                     <form class="delete" action="/memories/people/<%=people.id%>?_method=DELETE" method="POST">
                         <div class="deleteButton"><input type="submit" type="button" class="btn btn-danger btn-lg btn-block" value="Delete"></div>

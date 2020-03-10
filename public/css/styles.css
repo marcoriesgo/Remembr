@@ -549,56 +549,21 @@ a:hover {
     margin-bottom: 20px;
 }
 
-#highImportance {
+
+#occassionPlace {
     font-size: 22px;
     color: white;
     margin-top: 15px;
     margin-bottom: 10px;
     font-weight: bold;
-    background-color: red;
-    width: 80%;
-    border-radius: 15px;
-    
-}
-
-#highImportance p {
-    padding-top: 7px;
-    padding-bottom: 7px;
-}
-
-#mediumImportance {
-    font-size: 22px;
-    color: white;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    font-weight: bold;
-    background-color: orange;
     width: 80%;
     border-radius: 15px;
 }
 
-#mediumImportance p {
+#occassionPlace p {
     padding-top: 7px;
     padding-bottom: 7px;
 }
-
-#lowImportance {
-    font-size: 22px;
-    color: white;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    font-weight: bold;
-    background-color: green;
-    width: 80%;
-    border-radius: 15px;
-}
-
-#lowImportance p {
-    padding-top: 7px;
-    padding-bottom: 7px;
-}
-
-
 
 footer {
     padding-top: 20px;
