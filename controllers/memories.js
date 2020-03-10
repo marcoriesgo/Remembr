@@ -18,30 +18,6 @@ memories.get('/', (req, res) => {
       res.render('./memories/onboarding.ejs');
 });
 
-
-
-
-//Quotes API Calls:
-const axios = require('axios');
-
-const quote = "";
-const author = "";
-
-axios.get('http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en')
-  .then(response => {
-    console.log(response.data.url);
-    console.log(response.data.explanation);
-  })
-  .catch(error => {
-    console.log(error);
-});
-
-
-
-
-
-
-
 /*
 //
 AUTHENTICATION ROUTES:
@@ -103,7 +79,6 @@ PEOPLE ROUTES:
 //     console.log(err)
 //   }
 // });
-
 
 // Main page route:
 memories.get('/people', (req, res) => {
