@@ -4,8 +4,10 @@ const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
-const port = 3000;
 const session = require("express-session");
+
+// Allow use of Heroku's port or your own local port, depending on the environment
+const PORT = process.env.PORT || 3000;
 
 //Call for the methods controller:
 const memoriesController = require('./controllers/memories');
@@ -16,19 +18,39 @@ const memoriesController = require('./controllers/memories');
 // mongoose.connect(mongoURI);
 
 //Connect mongoose to mongoDB:
-mongoose.connect("mongodb://localhost:27017/marco_remembr_memories", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+// mongoose.connect("mongodb://localhost:27017/marco_remembr_memories", {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true
+// });
 
 //Use a simple term for mongoose.connection for accessibility:
-const db = mongoose.connection;
+// const db = mongoose.connection;
 
 //Tell the database what to do when trying to connect to mongo:
-db.on('error', console.error.bind(console, 'connection to mongo error:'));
-db.once ('open', function() {
-  console.log('DB: Connected to mongo');
-});
+// db.on('error', console.error.bind(console, 'connection to mongo error:'));
+// db.once ('open', function() {
+//   console.log('DB: Connected to mongo');
+// });
+
+//___________________
+//Database
+//___________________
+// How to connect to the database either via heroku or locally
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/'+ `marco_remembr_memories`;
+
+// Connect to Mongo
+mongoose.connect(MONGODB_URI ,  { useNewUrlParser: true});
+
+// Use a simple term for mongoose.connection for accessibility:
+const db = mongoose.connection;
+
+// Error / success
+db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
+db.on('connected', () => console.log('mongo connected: ', MONGODB_URI));
+db.on('disconnected', () => console.log('mongo disconnected'));
+
+// open the connection to mongo
+db.on('open' , ()=>{});
 
 
 //Create the middleware:
@@ -36,11 +58,17 @@ db.once ('open', function() {
 //Public folder static:
 app.use(express.static(__dirname + '/public'));
 
-//Method override for POST, DELETE, and PUT requests from forms:
-app.use(methodOverride('_method'));
 
 //Parse the info from the forms:
 app.use(bodyParser.urlencoded({extended : false}));
+
+//Make the JSON Parser:
+app.use(bodyParser.json());
+
+
+//Method override for POST, DELETE, and PUT requests from forms:
+app.use(methodOverride('_method'));
+
 
 //Session:
 app.use(session({
@@ -49,8 +77,7 @@ app.use(session({
   saveUninitialized: false
 }));
 
-//Make the JSON Parser:
-app.use(bodyParser.json());
+
 
 
 //Tell the app to use the memories.js when /memories is called on:
@@ -101,7 +128,7 @@ app.use('/users', usersController);
 const sessionsController = require('./controllers/sessions.js');
 app.use('/sessions', sessionsController);
 
-//App listener:
-app.listen(port, () => {
-    console.log('Looking for memories on port ' + port);
-});
+//___________________
+//Listener
+//___________________
+app.listen(PORT, () => console.log( 'Listening on port:', PORT));

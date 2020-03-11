@@ -16,6 +16,9 @@
   "bugs": {
     "url": "https://github.com/marcoriesgo01/project-2/issues"
   },
+  "engines": {
+    "node": "10.11.0"
+  },
   "homepage": "https://github.com/marcoriesgo01/project-2#readme",
   "dependencies": {
     "axios": "^0.19.2",
