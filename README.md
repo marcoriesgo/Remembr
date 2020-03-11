@@ -20,7 +20,7 @@ The following link redirects to the project's spreadsheet:
 
 https://docs.google.com/spreadsheets/d/1fS22w516hrhnCq4oJuuUdUQXpVWzxLps8brO4I0ulJc/edit?pli=1#gid=978133499
 
-## Remembr User Stories:
+## Remembr: User Stories:
 
 User stories are public on Trello. Clink on the link below to view them. Logging into Trello is not required.
 
@@ -30,29 +30,29 @@ https://trello.com/b/nAjLMVbR/project-2-remembr
 
 * HTML
 
-* CSS
+* CSS - used to style the website.
 
-* JavaScript
+* JavaScript - used for quote API call. 
 
-* jQuery
+* jQuery - used to add the API retrieved quote to the homepage. 
 
-* Ajax
+* Ajax - used to make API call to Forismatic.
 
 * API: Forismatic Quotes API
 
-* EJS
+* EJS - used for application views.
 
-* Node.js
+* Node.js - used for backend JavaScript on Remembr network application.
 
-* Mongoose
+* Mongoose - used for data storage in the database of the application.
 
-* Express
+* Express - used for the server framework of the application.
 
 * RESTful Routes: Index, New, Create, Show, Edit, Update, and Destroy
 
-* Bcrypt
+* Bcrypt - used for authorization: login, signup, logout, and password encryption.
 
-* Bootstrap
+* Bootstrap - used for basic site styling, including centering, buttons, and forms.
 
 ## Approach Taken To Complete Remembr:
 
@@ -60,7 +60,7 @@ https://trello.com/b/nAjLMVbR/project-2-remembr
 
 2. Setup the file structure and files.
 
-3. Get all 7 routes working.
+3. Get all 7 routes working - get to MVP.
 
 4. Setup the different pages for each category, as well as setting up the different routes for all of them, including show, edit, and delete.
 
@@ -68,66 +68,35 @@ https://trello.com/b/nAjLMVbR/project-2-remembr
 
 6. Style all of the different pages and add Bootstrap.
 
-7. Setup Heroku and deploy the application.
+7. Add the Quotes API using Forismatic quotes and add it to the home page using jQuery.
 
-### User Input: 
+8. Setup Heroku and deploy the application.
 
-* Buttons with different food types for the user to decide what type of food to enerate recipes of.
+## Remembr Wireframe:
 
-* Input form of the calories to be consumed.
+![Remembr Wireframe](/images/wireframe.png)
+Format: ![Alt Text](Remembr Wireframe)
 
-### Div:
 
-* After the user has dragged something into the drop section:
+## Main Challenges When Creating Remembr:
 
-* Three different recipes for that food type are displayed.
+* Having users only see their own data by using additional relationships between the models. 
 
-* Each different recipe includes the a link to the recipe - reputable website. 
+* Creating and tracking a lot of different routes and EJS pages that would create a good user experience and flow.
 
-## API Used To Generate Meals:
+## Unsolved Problems For The Future - Future Challenges:
 
-* Edamam - API that searches for meal recipes based on user inputs.
+* Add additional relationships between the models.
 
-* "https://api.edamam.com/search?q=steak&app_id=cd8e8580&app_key=f8d1fa2b821a6224e531e36c5b111182"
+* Make each user have their own portal where they can store personal data, save posts from the boards, and take notes. This data should be user specific and only the active user should see it.
 
-* API above fiters recipes by food.
+* Create functionality for users to message each other through Remembr.
 
-## MVP:
+* Allow users to comment on board posts and create meetups for similar interests.
 
-* User can click on a food type.
 
-* User can see a recipe based on their search.
+## API Used To Generate Inspirational Quotes:
 
-* Each recipe displays a picture of the recipe.
+Forismativ API - This API was used to generate random inspirational quotes. The quotes are added and deleted to the home page upon user request using jQuery, Ajax, JavaScript, and HTML. The following link is the Forismatic API main website.
 
-* Each rcipe displayed gives users a link.
-
-* Website is built using HTML, CSS, Javascript, and Jquery.
-
-* Website uses an API.
-
-* Website makes an ajax call in order to retrieve data and display it to the user.
-
-## More Potential Functionality:
-
-* User can see the recipe's calories, nutrition facts, and rating.
-
-* User can input the amount of calories they would like to consume, only showing them recipes with a value less than or equal to that.
-
-## Steps Completed:
-
-- Set up all files and boilerplates.
-
-- Set up HTML
-
-- CSS is completed
-
-- Javascript is setup
-
-- 3 ajax calls are complete
-
-- Variables setup
-
-- Jquery Complete
-
-- MVP Completed
+https://forismatic.com/en/api/
