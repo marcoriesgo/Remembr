@@ -74,8 +74,8 @@ https://trello.com/b/nAjLMVbR/project-2-remembr
 
 ## Remembr Wireframe:
 
-![Remembr Wireframe](/images/wireframe.png)
-Format: ![Alt Text](Remembr Wireframe)
+![alt text](https://github.com/marcoriesgo01/project-2/blob/master/public/images/wireframe.png?raw=true)
+
 
 
 ## Main Challenges When Creating Remembr:
@@ -83,6 +83,8 @@ Format: ![Alt Text](Remembr Wireframe)
 * Having users only see their own data by using additional relationships between the models. 
 
 * Creating and tracking a lot of different routes and EJS pages that would create a good user experience and flow.
+
+* Figuring out errors and managing deployment with Heroku.
 
 ## Unsolved Problems For The Future - Future Challenges:
 
