@@ -342,7 +342,7 @@ SEED ROUTES:
 memories.get('/seed/newmemories', (req, res) => {
    const newPeople = [
    {
-    personName: "Judy B. Iwanier, MSW",
+    personName: "Judy B. Iwanier",
     personProfession: "Doctor",
     personImg: "https://cdn4.sussexdirectories.com/rms/rms_photos/sized/94/63/326394-945486-2_320x400.jpg?pu=1495324926",
     personBirthday: "December 12",
@@ -366,7 +366,7 @@ memories.get('/seed/newmemories', (req, res) => {
     personIntro: "Hi friends, my name is Joseph and I work with a wide range of elderly patients. I have worked with both male/female clients for the last 10 years to make sure they are safe, clean and HAPPY. I love to play music specific to my client's tastes and generation. "
     },
     {
-    personName: "Dr. Daniel C Slavin",
+    personName: "Dr. Daniel Slavin",
     personProfession: "Psychotherapist",
     personImg: "https://cdn0.sussexdirectories.com/rms/rms_photos/sized/22/16/81622-1512334-3_320x400.jpg?pu=1558799799",
     personBirthday: "February 7",
@@ -403,7 +403,7 @@ memories.get('/seed/newmemories', (req, res) => {
     placeName: "Kaiser Permanente",
     placeLocation: "6041 Cadillac Ave, Los Angeles, CA 90034",
     placeActivity: "Neurology Clinic",
-    greatFor: "Neuroloists",
+    greatFor: "Neurologists",
     placeNotes: "Neurology clinic directed by Paul Boris Kazimiroff, MD and owned by Kaiser Permanente.",
     placeImg: "https://thrive.kaiserpermanente.org/care-near-you/southern-california/west-los-angeles/wp-content/uploads/sites/14/2013/11/186bc70757bb85f6e270.png"    
     },
@@ -466,7 +466,7 @@ memories.get('/seed/newmemories', (req, res) => {
       occassionNotes: "Hula is a low to medium impact exercise, easing the strain on the joints. Dancing is also good for your abs, back and hips and helps to tone and strengthen your legs."
     },
     {
-      occassionName: "Senior Symposium & Fair",
+      occassionName: "Senior Volunteer Fair",
       occassionDate: "May 16, 2020 at 9am",
       occassionPlace: "ONEgeneration Enrichment Center",
       occassionNotes: "ONEgeneration Senior Enrichment Center Presents: 12th Annual Senior Symposium & Senior Job/Volunteer Fair Saturday, May 16th, 2020 9:00am-2:00pm."
