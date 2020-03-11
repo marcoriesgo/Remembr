@@ -54,21 +54,21 @@ https://trello.com/b/nAjLMVbR/project-2-remembr
 
 * Bootstrap
 
-## Page Structure:
+## Approach Taken To Complete Remembr:
 
-* Title
+1. Ideate and wireframe the site.
 
-* Page introduction
+2. Setup the file structure and files.
 
-* Types of Food Buttons
+3. Get all 7 routes working.
 
-* Calorie selector input field
+4. Setup the different pages for each category, as well as setting up the different routes for all of them, including show, edit, and delete.
 
-* Recipe section with a picture of the recipe plus data about it
+5. Create authorization: users can log in, sign up, and log out. Also create different pages and route to access the different ways to log in.
 
-* Button to geenerate new recipe if the user is not happy with the current one
+6. Style all of the different pages and add Bootstrap.
 
-* Footer with Edamam API Thanks
+7. Setup Heroku and deploy the application.
 
 ### User Input: 
 
