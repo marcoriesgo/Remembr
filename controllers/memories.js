@@ -65,18 +65,6 @@ memories.post('/login', (req, res)=>{
 });
 
 
-// //POST ROUTE IN ORDER TO CHECK THE LOGIN FORM FOR CREDENTIALS:
-// memories.post('/login', (req, res)=>{
-//   User.findOne({ username: req.body.username },(err, foundUser) => {
-//     if( bcrypt.compareSync(req.body.password, foundUser.password) ){
-//       req.session.currentUser = foundUser;
-//       res.redirect('/home');
-//     } else {
-//       res.render('./memories/wrong.ejs');
-//     }
-//   });
-// });
-
 //Delete route to delete the session:
 memories.delete('/logout', (req, res) => {
   req.session.destroy(()=>{
@@ -85,6 +73,43 @@ memories.delete('/logout', (req, res) => {
   });
 })
 
+
+/*
+//
+USER SPECIFIC ROUTES:
+//
+*/
+// memories.get('/contacts', (req, res) => {
+//   User.findOne( { contactName: req.session.currentUser.contactName }, (err, contacts) => {
+//     console.log(req.session.currentUser.contactName);
+//     if(err) {
+//       console.log(err); 
+//     };
+//     console.log(req.session.currentUser);
+//     res.render('./memories/contacts.ejs', { 
+//       contacts,
+//       currentUser: req.session.currentUser
+//     });
+//   });
+// });
+
+// memories.get('/contacts/new', (req, res) => {
+//   res.render('./memories/newcontact.ejs', {
+//     currentUser: req.session.currentUser
+//   });
+// });
+
+// memories.post ('/contacts', (req, res) => {
+//   User.create(req.body, (err, contact) => {
+//     // contactName = req.body
+//     req.session.currentUser.contactName
+//     if(err) { 
+//       console.log(err);
+//     } else {
+//       res.redirect('/memories/contacts');
+//     }
+//   });
+// });
 
 /*
 //
@@ -142,12 +167,11 @@ memories.get ('/people/:id', (req, res) => {
 // Create a POST route to add the new person:
 memories.post ('/people', (req, res) => {
     People.create(req.body, (err, people) => {
+      console.log(req.body);
       if(err) { 
         res.send(err);
       } else {
-        res.redirect('/memories/people', {
-          currentUser: req.session.currentUser
-        });
+        res.redirect('/memories/people');
       }
     });
 });
