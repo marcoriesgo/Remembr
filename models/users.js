@@ -5,7 +5,8 @@ const Schema = mongoose.Schema;
 //Create the user schema:
 const userSchema = Schema({
   username: String,
-  password: String
+  password: String,
+  savedPersonName: { type: String, default: ""}
 });
 
 //Create the user model:

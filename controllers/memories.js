@@ -109,6 +109,7 @@ memories.get('/people', (req, res) => {
       if(err) {
         console.log(err); 
       };
+      // console.log(req.session.currentUser._id);
       res.render('./memories/people.ejs', { 
         people,
         currentUser: req.session.currentUser
@@ -124,12 +125,13 @@ memories.get('/people/new', (req, res) => {
 });
 
 
-// Make a SHOW person memories route:
+//Make a SHOW person memories route:
 memories.get ('/people/:id', (req, res) => {
     People.findById(req.params.id, (err, people) => {
       if(err) {
         console.log(err); 
       };
+      console.log(people.personName);
       res.render('./memories/showperson.ejs', { 
         people: people,
         currentUser: req.session.currentUser
@@ -153,13 +155,14 @@ memories.post ('/people', (req, res) => {
 // Create a GET route to redirect to edit page:
 memories.get('/people/:id/edit', (req, res) => {
     People.findById(req.params.id , (err, people) => {
-          if(err) { 
-            console.log(err); 
-          }
-          res.render('./memories/editperson.ejs', {
-            people: people,
-            currentUser: req.session.currentUser
-          }
+        if(err) { 
+          console.log(err); 
+        }
+
+        res.render('./memories/editperson.ejs', {
+          people: people,
+          currentUser: req.session.currentUser
+        }
         );
     });
 });
