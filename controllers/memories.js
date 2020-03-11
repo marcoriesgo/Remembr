@@ -58,6 +58,7 @@ memories.post('/login', (req, res)=>{
 //Delete route to delete the session:
 memories.delete('/logout', (req, res) => {
   req.session.destroy(()=>{
+      console.log("logout successful")
       res.redirect('/memories');
   });
 })
