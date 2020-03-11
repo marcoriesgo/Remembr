@@ -48,12 +48,12 @@ memories.post('/signupuser', (req, res)=>{
 //POST ROUTE IN ORDER TO CHECK THE LOGIN FORM FOR CREDENTIALS:
 memories.post('/login', (req, res)=>{
   User.findOne({ username: req.body.username },(err, foundUser) => {
-      if( bcrypt.compareSync(req.body.password, foundUser.password) ){
-          req.session.currentUser = foundUser;
-          res.redirect('/home');
-      } else {
-          res.render('./memories/wrong.ejs');
-      }
+    if( bcrypt.compareSync(req.body.password, foundUser.password) ){
+      req.session.currentUser = foundUser;
+      res.redirect('/home');
+    } else {
+      res.render('./memories/wrong.ejs');
+    }
   });
 });
 

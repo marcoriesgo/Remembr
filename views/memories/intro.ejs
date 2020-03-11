@@ -9,7 +9,9 @@
         <div class="introPage">
             <div class="heading">
             <%- include('../partials/title.ejs') %>
-            <div class="homeButton"><a type="button" class="btn btn-warning btn-lg" href="/logout">Log Out</a></div>
+            <form class="homeButton" action="/memories/logout?_method=DELETE" method="POST">
+                <div class="logoutButton"><input type="submit" type="button" class="btn btn-warning btn-lg" value="Logout"></div>
+            </form>
             </div>
             <div class="container-fluid">
                 <div class="introToRemembr">

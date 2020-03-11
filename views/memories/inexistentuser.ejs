@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs') %>
+    <title>No User</title>
+</head>
+<body>
+    <div class="col-xs-1" align="center">
+            <div class="onboardingPage">
+                <div class="heading">
+                    <img class="logo" src="/images/logo.png"/>
+                    <h1 class="header">Remembr</h1>
+                </div>
+                <div class="container-fluid">
+                    <div class="title" id="welcome">Oh no!</div>
+                    <div class="welcomeMessage">
+                        <h3>The user you entered does not exist.</h3>
+                        <h3>What would you like to do?</h3>
+                    </div>
+                    <div class="onboardForm">
+                        <div class="loginButton"><a type="button" class="btn btn-warning btn-lg btn-block" href="/memories/login">Log In</a></div>
+                        <div class="signupButton"><a type="button" class="btn btn-warning btn-lg btn-block" href="/memories/signup">Sign Up</a></div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>
+    
