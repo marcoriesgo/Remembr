@@ -97,7 +97,7 @@ body {
     border-radius: 40px;
     color: black;
     padding-bottom: 3%;
-    box-shadow: 6px 5px 6px #b3b3b3eb;
+    box-shadow: 6px 5px 6px #b3b3b37c;
 }
 
 
@@ -191,6 +191,7 @@ body {
 
 .quoteContainer h2{
     font-size: 36px;
+    font-weight: 900;
 }
 
 #generateQuote {
@@ -608,7 +609,7 @@ footer {
     padding-bottom: 10px;
     width: 100%;
     text-align: center;
-    margin-top: 0px;
+    margin-top: 0;
     color: white;
     background: linear-gradient(300deg, #8f94fb 0%, #4e54c8 100%);
     font-size: 18px;
