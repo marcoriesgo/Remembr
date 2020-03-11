@@ -17,9 +17,8 @@
                     <h3>That's why we are here to help you.</h3>
                 </div>
                 <div class="onboardForm">
-                    <div class="signUpMessage"><p>Sign Up</p></div>
+                    <div id="newUserCreatedMessage"><p>Your user was created. Log in below to continue.</p></div>
                     <form class="signUpForm" action="/memories/login" method="POST">
-                        <div class="wrongPasswordText"><p>The password entered is incorrect</p></div>
                         <div class="form-group">
                             <label for="username">Username:</label>
                             <input type="text" class="form-control" name="username" placeholder="">
@@ -28,7 +27,7 @@
                             <label for="password">Password:</label>
                             <input type="password" class="form-control" name="password" placeholder="">
                         </div>
-                        <input class="btn btn-success btn-lg btn-block" id="enterSiteButton" type="submit" name="" value="Sign Up">
+                        <input class="btn btn-success btn-lg btn-block" id="enterSiteButton" type="submit" name="" value="Login">
                     </form>
                     <div class="cancelButton"><a type="button" class="btn btn-danger btn-lg" id="enterSiteButton" href="/memories">Cancel</a></div>
                 </div>

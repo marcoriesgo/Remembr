@@ -34,11 +34,13 @@ memories.get('/login', (req, res) => {
   res.render('./memories/login.ejs');
 });
 
+
+
 //POST Route for when the user signs up to the app:
-memories.post('/signup', (req, res)=>{
+memories.post('/signupuser', (req, res)=>{
   req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
   User.create(req.body, (err, createdUser)=>{
-      res.redirect('/home');
+      res.render('./memories/newusercreated.ejs');
   });
 });
 

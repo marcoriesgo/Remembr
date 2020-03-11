@@ -1,14 +1,19 @@
 # Project 2 - Remembr
 
-## Project:
-
-Remembr is an application for seniors suffering from early stage dementia, caretakers, and medical professionals in Los Angeles. Through the application, members can find professionals they could potentially hire and other users that are on a similar journey, discover new senior friendly places to visit and share their own favorites, and see or share upcoming senior friendly events where they can feel part of a community as they age and go through memory loss.
-
 ## Website link:
 
-Remembr is hosted on Heroku. Click on the link below to see it.
+Remembr is hosted on Heroku. Click on the link below to visit it.
+
+** IMPORTANT: Once you have signed up successfully and arrive at the Categories page, copy and paste the following URL into your browser once: **
+
+** //seed link goes here
 
 // Link to the website goes here.
+
+## Project:
+
+Remembr is an application for seniors suffering from early stage dementia, caretakers, and medical professionals in Los Angeles. Through the application, members can find professionals they could potentially hire and other users that are on a similar journey,discover new senior friendly places to visit and share their own favorites, and see or share upcoming senior friendly events where they can feel part of a community as they age and go through memory loss.
+
 
 ## Project Requirements:
 
@@ -48,7 +53,7 @@ https://trello.com/b/nAjLMVbR/project-2-remembr
 
 * Express - used for the server framework of the application.
 
-* RESTful Routes: Index, New, Create, Show, Edit, Update, and Destroy - Remembr Total Route Count:
+* RESTful Routes: Index, New, Create, Show, Edit, Update, and Destroy (Total Route Count: 40)
 
 * Bcrypt - used for authorization: login, signup, logout, and password encryption.
 
@@ -107,6 +112,8 @@ https://trello.com/b/nAjLMVbR/project-2-remembr
 * Create functionality for users to message each other through Remembr.
 
 * Allow users to comment on board posts and create meetups for similar interests.
+
+* Order items by categories, such as date for events.
 
 
 ## API Used To Generate Inspirational Quotes:

@@ -42,6 +42,12 @@ body {
     font-size: 36px;
 } 
 
+.newUserCreatedMessage {
+    padding-bottom: 0px;
+    color: white;
+    font-size: 36px;
+}
+
 #enterSiteButton {
     margin-top: 50px;
     width: 60%;
@@ -98,6 +104,21 @@ body {
     color: black;
     padding-bottom: 3%;
     box-shadow: 6px 5px 6px #b3b3b37c;
+}
+
+#newUserCreatedMessage {
+    background: #4fa745f0;
+    border-radius: 15px;
+    color: white;
+}
+
+#newUserCreatedMessage p {
+    font-size: 24px;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 
