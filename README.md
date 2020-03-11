@@ -48,7 +48,7 @@ https://trello.com/b/nAjLMVbR/project-2-remembr
 
 * Express - used for the server framework of the application.
 
-* RESTful Routes: Index, New, Create, Show, Edit, Update, and Destroy
+* RESTful Routes: Index, New, Create, Show, Edit, Update, and Destroy - Remembr Total Route Count:
 
 * Bcrypt - used for authorization: login, signup, logout, and password encryption.
 
