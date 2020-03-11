@@ -12,11 +12,11 @@ Remembr is hosted on Heroku. Click on the link below to see it.
 
 ## Project Requirements:
 
-This project's requirements are based on General Assembly's Project 2. The following link redirects to the course project's instructions:
+This project's requirements are based on General Assembly's Project 2. The following link are the project's instructions:
 
 https://git.generalassemb.ly/ira/SEIR-FLEX-123/tree/master/projects/project_2
 
-The following link redirects to the project's approval spreadsheet:
+The following link redirects to the project's spreadsheet:
 
 https://docs.google.com/spreadsheets/d/1fS22w516hrhnCq4oJuuUdUQXpVWzxLps8brO4I0ulJc/edit?pli=1#gid=978133499
 
@@ -34,15 +34,25 @@ https://trello.com/b/nAjLMVbR/project-2-remembr
 
 * JavaScript
 
-* AJAX
+* jQuery
 
-* 
+* Ajax
 
-* 
+* API: Forismatic Quotes API
 
-* 
+* EJS
 
-* 
+* Node.js
+
+* Mongoose
+
+* Express
+
+* RESTful Routes: Index, New, Create, Show, Edit, Update, and Destroy
+
+* Bcrypt
+
+* Bootstrap
 
 ## Page Structure:
 
