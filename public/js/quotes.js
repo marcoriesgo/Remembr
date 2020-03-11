@@ -1,23 +1,23 @@
-// $('#generateQuote').click(function() {
-//     $.ajax({
-//         url: "https://api.forismatic.com/api/1.0/",
-//         jsonp: "jsonp",
-//         dataType: "jsonp",
-//         data: {
-//           method: "getQuote",
-//           lang: "en",
-//           format: "jsonp"
-//         }
-//       })
-//       .done(update)
-//       .fail(handleErr);
-// });
-
 $('#generateQuote').click(function() {
-  $.getJSON("https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?")
-    .done(update)
-    .fail(handleErr);
+    $.ajax({
+        url: "https://api.forismatic.com/api/1.0/",
+        jsonp: "jsonp",
+        dataType: "jsonp",
+        data: {
+          method: "getQuote",
+          lang: "en",
+          format: "jsonp"
+        }
+      })
+      .done(update)
+      .fail(handleErr);
 });
+
+// $('#generateQuote').click(function() {
+//   $.getJSON("https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?")
+//     .done(update)
+//     .fail(handleErr);
+// });
 
 function update(response) {
     $('#quote').empty();
@@ -27,7 +27,7 @@ function update(response) {
     console.log(response);
 }
   
-function handleErr(jqxhr, textStatus, err) {
+function handleErr(kjb, textStatus, err) {
     console.log("AJAX Quotes API Call: " + textStatus + ", " + err);
 }
 
