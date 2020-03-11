@@ -76,7 +76,19 @@ https://trello.com/b/nAjLMVbR/project-2-remembr
 
 ![alt text](https://github.com/marcoriesgo01/project-2/blob/master/public/images/wireframe.png?raw=true)
 
+## Stretch Goals Completed:
 
+* Use EJS Partials
+
+* Include portfolio-quality styling
+
+* Use a CSS framework like Skeleton or Bootstrap
+
+* Incorporate a 3rd Party API: Forismatic
+
+* Inside README.md file:
+    * Include User Stories
+    * Include wireframes designed for application
 
 ## Main Challenges When Creating Remembr:
 
