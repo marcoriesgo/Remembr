@@ -44,18 +44,38 @@ memories.post('/signupuser', (req, res)=>{
   });
 });
 
-
-//POST ROUTE IN ORDER TO CHECK THE LOGIN FORM FOR CREDENTIALS:
 memories.post('/login', (req, res)=>{
   User.findOne({ username: req.body.username },(err, foundUser) => {
-    if( bcrypt.compareSync(req.body.password, foundUser.password) ){
+    if (err) { 
+      console.log(err); 
+    }
+    if (!foundUser) {
+      console.log("user not found")
+      res.render('./memories/inexistentuser.ejs');
+      return;
+    }
+    if (bcrypt.compareSync(req.body.password, foundUser.password)){
       req.session.currentUser = foundUser;
+      console.log("user and password correct");
       res.redirect('/home');
     } else {
       res.render('./memories/wrong.ejs');
     }
   });
 });
+
+
+// //POST ROUTE IN ORDER TO CHECK THE LOGIN FORM FOR CREDENTIALS:
+// memories.post('/login', (req, res)=>{
+//   User.findOne({ username: req.body.username },(err, foundUser) => {
+//     if( bcrypt.compareSync(req.body.password, foundUser.password) ){
+//       req.session.currentUser = foundUser;
+//       res.redirect('/home');
+//     } else {
+//       res.render('./memories/wrong.ejs');
+//     }
+//   });
+// });
 
 //Delete route to delete the session:
 memories.delete('/logout', (req, res) => {
