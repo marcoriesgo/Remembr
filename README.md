@@ -23,7 +23,7 @@ Project approvals spreadsheet:
 
 ## Remembr User Stories:
 
-User stories are public on Trello. Clink on the link below to view them. Logging into Trello is not required.
+User stories are public on Trello. Click on the link below to view them. Logging into Trello is not required.
 
 [Project 2 User Stories - Remembr](https://trello.com/b/nAjLMVbR/project-2-remembr)
 
