@@ -21,7 +21,7 @@ Project approvals spreadsheet:
 
 [Project Approvals](https://docs.google.com/spreadsheets/d/1fS22w516hrhnCq4oJuuUdUQXpVWzxLps8brO4I0ulJc/edit?pli=1#gid=978133499)
 
-## Remembr: User Stories:
+## Remembr User Stories:
 
 User stories are public on Trello. Clink on the link below to view them. Logging into Trello is not required.
 
