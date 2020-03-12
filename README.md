@@ -4,32 +4,28 @@
 
 Remembr is hosted on Heroku. Click on the link below to visit it.
 
-** IMPORTANT: Once you have signed up successfully and arrive at the Categories page, copy and paste the following URL into your browser once: **
-
-** //seed link goes here
-
-// Link to the website goes here.
+[Remembr](https://remembr-memories.herokuapp.com/)
 
 ## Project:
 
-Remembr is an application for seniors suffering from early stage dementia, caretakers, and medical professionals in Los Angeles. Through the application, members can find professionals they could potentially hire and other users that are on a similar journey,discover new senior friendly places to visit and share their own favorites, and see or share upcoming senior friendly events where they can feel part of a community as they age and go through memory loss.
+Remembr is an application for seniors suffering from early stage dementia, caretakers, and medical professionals in Los Angeles. Through the application, members can find professionals they could potentially hire, see other users that are on a similar journey, discover and share new senior friendly places to visit, and see upcoming senior friendly events where they can feel part of a community as they age.
 
 
 ## Project Requirements:
 
-This project's requirements are based on General Assembly's Project 2. The following link are the project's instructions:
+This project's requirements are based on General Assembly's Project 2. See the project instructions at the link below:
 
-https://git.generalassemb.ly/ira/SEIR-FLEX-123/tree/master/projects/project_2
+[Project Requirements](https://git.generalassemb.ly/ira/SEIR-FLEX-123/tree/master/projects/project_2)
 
-The following link redirects to the project's spreadsheet:
+Project approvals spreadsheet:
 
-https://docs.google.com/spreadsheets/d/1fS22w516hrhnCq4oJuuUdUQXpVWzxLps8brO4I0ulJc/edit?pli=1#gid=978133499
+[Project Approvals](https://docs.google.com/spreadsheets/d/1fS22w516hrhnCq4oJuuUdUQXpVWzxLps8brO4I0ulJc/edit?pli=1#gid=978133499)
 
 ## Remembr: User Stories:
 
 User stories are public on Trello. Clink on the link below to view them. Logging into Trello is not required.
 
-https://trello.com/b/nAjLMVbR/project-2-remembr
+[Project 2 User Stories - Remembr](https://trello.com/b/nAjLMVbR/project-2-remembr)
 
 ## Technologies Used:
 
@@ -120,4 +116,4 @@ https://trello.com/b/nAjLMVbR/project-2-remembr
 
 Forismativ API - This API was used to generate random inspirational quotes. The quotes are added and deleted to the home page upon user request using jQuery, Ajax, JavaScript, and HTML. The following link is the Forismatic API main website.
 
-https://forismatic.com/en/api/
+[Forismatic API](https://forismatic.com/en/api/)
